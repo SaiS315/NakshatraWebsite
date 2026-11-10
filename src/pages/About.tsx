@@ -2,32 +2,33 @@ import { useEffect, useRef, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import sudeeksha_nooka from '../assets/sudeeksha_nooka.jpg';
-import rohan_vuppalapati from '../assets/rohan_vuppalapati.jpg';
-import rhianna_nakrani from '../assets/rhianna_nakrani.jpg';
-import diya_gopinath from '../assets/diya_gopinath.jpg';
-import mardav_shah from '../assets/mardav_shah.jpg';
-import raja_chinnakotla from '../assets/raja_chinnakotla.jpg';
-import isha_darshan_lokande from '../assets/isha_darshan_lokande.jpg';
-import sanjay_murali from '../assets/sanjay_murali.jpg';
-import srikar_kalapala from '../assets/srikar_kalapala.jpg';
-import ayush_harish from '../assets/ayush_harish.jpg';
-import kaitlyn_narman from '../assets/kaitlyn_narman.jpg';
-import akshita_tirumalaraju from '../assets/akshita_tirumalaraju.jpg';
-import sobhan_pandey from '../assets/sobhan_pandey.jpg';
-import nandini_shah from '../assets/nandini_shah.jpg';
-import vinay_ramanathan from '../assets/vinay_ramanathan.jpg';
-import aniruddh_mayya from '../assets/aniruddh_mayya.jpg';
-import prishaa_rajesh from '../assets/prishaa_rajesh.jpg';
-import iman_hafeez from '../assets/iman_hafeez.jpg';
-import shruthi_sridhar from '../assets/shruthi_sridhar.jpg';
-import rithika_rajesh from '../assets/rithika_rajesh.jpg';
-import diya_satanur from '../assets/diya_satanur.jpg';
-import riya_mathews from '../assets/riya_mathews.jpg';
-import aanchal_capoor from '../assets/aanchal_capoor.jpg';
-import megha_brahmbhatt from '../assets/megha_brahmbhatt.jpg';
-import keshav_shah from '../assets/keshav_shah.jpg';
-import krishna_maganti from '../assets/krishna_maganti.jpg';
+import adithyaPhoto from '../assets/ExecBoardPhotos/Adithya.jpg';
+import ananyaShankarPhoto from '../assets/ExecBoardPhotos/AnanyaS.jpg';
+import ananyaYanduruPhoto from '../assets/ExecBoardPhotos/AnanyaY.jpg';
+import ayushPhoto from '../assets/ExecBoardPhotos/Ayush.jpg';
+import ashwathPhoto from '../assets/ExecBoardPhotos/Ashwath.jpg';
+import aathmikhaPhoto from '../assets/ExecBoardPhotos/Aathmikha.jpg';
+import chetanaPhoto from '../assets/ExecBoardPhotos/Chetana.jpg';
+import diyaPhoto from '../assets/ExecBoardPhotos/Diya.jpg';
+import jairamPhoto from '../assets/ExecBoardPhotos/Jairam.jpg';
+import hiyaPhoto from '../assets/ExecBoardPhotos/Hiya.jpg';
+import joshithaPhoto from '../assets/ExecBoardPhotos/Joshitha.jpg';
+import krishnaPhoto from '../assets/ExecBoardPhotos/Krishna.jpg';
+import nandiniPhoto from '../assets/ExecBoardPhotos/Nandini.jpg';
+import patriciaPhoto from '../assets/ExecBoardPhotos/Patricia.jpg';
+import pransiPhoto from '../assets/ExecBoardPhotos/Pransi.jpg';
+import riyaPhoto from '../assets/ExecBoardPhotos/Riya.jpg';
+import rohitPhoto from '../assets/ExecBoardPhotos/Rohit.jpg';
+import roystonPhoto from '../assets/ExecBoardPhotos/Royston.jpg';
+import saiPhoto from '../assets/ExecBoardPhotos/Sai.jpg';
+import sanjayPhoto from '../assets/ExecBoardPhotos/Sanjay.jpg';
+import sanjnaPhoto from '../assets/ExecBoardPhotos/Sanjna.jpg';
+import shaktiPhoto from '../assets/ExecBoardPhotos/Shakti.jpg';
+import snehaPhoto from '../assets/ExecBoardPhotos/Sneha.jpg';
+import srikarPhoto from '../assets/ExecBoardPhotos/Srikar.jpg';
+import sripadaPhoto from '../assets/ExecBoardPhotos/Sripada.jpg';
+import siratPhoto from '../assets/ExecBoardPhotos/Sirat.jpg';
+import srutiPhoto from '../assets/ExecBoardPhotos/Sruti.jpg';
 
 // ── Scroll-reveal hook ────────────────────────────────────────
 function useReveal() {
@@ -83,110 +84,111 @@ function getInitials(name: string): string {
 const departments: {
   dept: string;
   email: string;
-  members: { name: string; photo: string; objectPosition?: string; transform?: string; }[];
+  members: { name: string; photo?: string; objectPosition?: string }[];
 }[] = [
   {
     dept: 'Directors',
     email: 'nakshatrauw@gmail.com',
     members: [
-      { name: 'Sudeeksha Nooka', photo: sudeeksha_nooka },
-      { name: 'Rohan Vuppalapati', photo: rohan_vuppalapati },
-      { name: 'Rhianna Nakrani', photo: rhianna_nakrani },
+      { name: 'Krishna Maganti', photo: krishnaPhoto },
+      { name: 'Riya Mathews', photo: riyaPhoto },
+      { name: 'Srikar Kalapala', photo: srikarPhoto, objectPosition: 'center top' },
     ],
   },
   {
     dept: 'Events',
     email: 'nakshatrauw.relations@gmail.com',
     members: [
-      { name: 'Diya Gopinath', photo: diya_gopinath },
-      { name: 'Mardav Shah', photo: mardav_shah },
+      { name: 'Ananya Shankar', photo: ananyaShankarPhoto },
+      { name: 'Ananya Yanduru', photo: ananyaYanduruPhoto },
     ],
   },
   {
     dept: 'Finance',
     email: 'nakshatrauw.finance@gmail.com',
     members: [
-      { name: 'Raja Chinnakotla', photo: raja_chinnakotla },
+      { name: 'Hiya Tanna', photo: hiyaPhoto },
     ],
   },
   {
     dept: 'Fundraising',
     email: 'nakshatrauw.finance@gmail.com',
     members: [
-      { name: 'Isha Darshan Lokande', photo: isha_darshan_lokande, objectPosition: 'center 60%' },
-      { name: 'Sanjay Murali', photo: sanjay_murali },
-      { name: 'Srikar Kalapala', photo: srikar_kalapala },
+      { name: 'Sneha Machandani', photo: snehaPhoto },
+      { name: 'Sripada Thammera', photo: sripadaPhoto },
+      { name: 'Ashwath Vijayaraghavan', photo: ashwathPhoto },
     ],
   },
   {
     dept: 'Head Liaisons',
     email: 'nakshatrauw.relations@gmail.com',
     members: [
-      { name: 'Ayush Harish', photo: ayush_harish },
-      { name: 'Kaitlyn Narman', photo: kaitlyn_narman },
+      { name: 'Sanjna Akula', photo: sanjnaPhoto },
+      { name: 'Patricia Prakasam', photo: patriciaPhoto },
     ],
   },
   {
     dept: 'Hospitality',
     email: 'nakshatrauw.finance@gmail.com',
     members: [
-      { name: 'Akshita Tirumalaraju', photo: akshita_tirumalaraju },
-      { name: 'Sobhan Pandey', photo: sobhan_pandey },
+      { name: 'Royston Marques', photo: roystonPhoto },
+      { name: 'Chetana Vysangi', photo: chetanaPhoto },
     ],
   },
   {
     dept: 'Judging',
     email: 'nakshatrauw.relations@gmail.com',
     members: [
-      { name: 'Nandini Shah', photo: nandini_shah },
-      { name: 'Vinay Ramanathan', photo: vinay_ramanathan },
+      { name: 'Rohit Raghunathan', photo: rohitPhoto },
+      { name: 'Aditya Sunderesan', photo: adithyaPhoto },
     ],
   },
   {
     dept: 'Logistics',
     email: 'nakshatrauw.finance@gmail.com',
     members: [
-      { name: 'Aniruddh Mayya', photo: aniruddh_mayya },
-      { name: 'Prishaa Rajesh', photo: prishaa_rajesh },
+      { name: 'Sirat Mokha', photo: siratPhoto },
+      { name: 'Sruti Palla', photo: srutiPhoto },
     ],
   },
   {
     dept: 'Marketing',
     email: 'nakshatrauw.relations@gmail.com',
     members: [
-      { name: 'Iman Hafeez', photo: iman_hafeez },
-      { name: 'Shruthi Sridhar', photo: shruthi_sridhar, objectPosition: 'center 40%' },
+      { name: 'Shakti Iyer', photo: shaktiPhoto },
+      { name: 'Jairam Narayanan', photo: jairamPhoto },
+      { name: 'Pransi Patel', photo: pransiPhoto },
     ],
   },
   {
     dept: 'Philanthropy',
     email: 'nakshatrauw.relations@gmail.com',
     members: [
-      { name: 'Rithika Rajesh', photo: rithika_rajesh },
+      { name: 'Nandini Nambiar', photo: nandiniPhoto },
     ],
   },
   {
     dept: 'Registration',
     email: 'nakshatrauw.relations@gmail.com',
     members: [
-      { name: 'Diya Satanur', photo: diya_satanur },
-      { name: 'Riya Mathews', photo: riya_mathews },
+      { name: 'Diya Raghunath', photo: diyaPhoto },
+      { name: 'Joshitha Senthil', photo: joshithaPhoto },
     ],
   },
   {
     dept: 'Risk & Affiliation',
     email: 'nakshatrauw.relations@gmail.com',
     members: [
-      { name: 'Aanchal Capoor', photo: aanchal_capoor },
-      { name: 'Megha Brahmbhatt', photo: megha_brahmbhatt },
+      { name: 'Ayush Harish', photo: ayushPhoto },
+      { name: 'Aathmikha Somi Ashok Kumar', photo: aathmikhaPhoto },
     ],
   },
   {
     dept: 'Tech',
     email: 'nakshatrauw.finance@gmail.com',
     members: [
-      { name: 'Keshav Shah', photo: keshav_shah, objectPosition: 'center 40%' },
-      { name: 'Krishna Maganti', photo: krishna_maganti },
+      { name: 'Sanjay Murali', photo: sanjayPhoto },
+      { name: 'Saikrishna Sunkara', photo: saiPhoto },
     ],
   },
 ];
@@ -201,9 +203,9 @@ const stats = [
 function Divider() {
   return (
     <div style={{ display: 'flex', alignItems: 'center', margin: '3.5rem 0' }}>
-      <div style={{ flex: 1, height: '1px', background: 'linear-gradient(to right, transparent, var(--gold-muted))' }} />
+      <div style={{ flex: 1, height: '1px', backgroundColor: 'var(--gold-muted)' }} />
       <div style={{ width: '7px', height: '7px', background: 'var(--gold)', transform: 'rotate(45deg)', margin: '0 16px', boxShadow: '0 0 8px var(--gold-glow)' }} />
-      <div style={{ flex: 1, height: '1px', background: 'linear-gradient(to left, transparent, var(--gold-muted))' }} />
+      <div style={{ flex: 1, height: '1px', backgroundColor: 'var(--gold-muted)' }} />
     </div>
   );
 }
@@ -308,32 +310,35 @@ export default function About() {
                 <Col key={mi} xs={12} sm={6} md={4} lg={3}>
                   <Reveal delay={0.1 + mi * 0.08}>
                     <div style={{ overflow: 'hidden', borderRadius: '6px', background: 'rgba(255,255,255,0.04)', border: '1px solid var(--border-purple)' }}>
-                      <img
-                        src={m.photo}
-                        alt={m.name}
-                        loading="lazy"
-                        style={{
-                          width: '100%',
-                          height: '280px',
-                          objectFit: 'cover',
-                          objectPosition: m.objectPosition || 'center 60%',
-                          transform: m.transform,
-                          display: 'block'
-                        }}
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          target.style.display = 'none';
-                          const fallback = target.nextElementSibling as HTMLDivElement;
-                          if (fallback) fallback.style.display = 'flex';
-                        }}
-                      />
+                      {m.photo && (
+                        <img
+                          src={m.photo}
+                          alt={m.name}
+                          loading="lazy"
+                          style={{
+                            width: '100%',
+                            height: '280px',
+                            objectFit: 'cover',
+                            objectPosition: m.objectPosition ?? 'center 60%',
+                            display: 'block',
+                          }}
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            target.style.display = 'none';
+                            const fallback = target.nextElementSibling as HTMLDivElement;
+                            if (fallback) fallback.style.display = 'flex';
+                          }}
+                        />
+                      )}
                       <div
+                        role="img"
+                        aria-label={m.name}
                         style={{
                           width: '100%',
                           height: '280px',
                           background: 'rgba(107, 33, 168, 0.2)',
                           color: 'var(--gold)',
-                          display: 'none',
+                          display: m.photo ? 'none' : 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
                           fontSize: '1.5rem',

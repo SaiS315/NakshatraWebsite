@@ -6,6 +6,13 @@
   -webkit-backdrop-filter: blur(16px);
 }
 
+.navbar-brand-text,
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
 .navbar-brand-text {
   font-family: var(--font-heading);
   font-size: 1.5rem;
@@ -13,6 +20,15 @@
   color: var(--gold) !important;
   letter-spacing: 0.18em;
   text-shadow: 0 0 18px var(--gold-glow);
+}
+
+.brand-logo {
+  width: 1.75rem;
+  height: 1.75rem;
+  object-fit: contain;
+  vertical-align: middle;
+  margin-right: 0.4rem;
+  filter: brightness(0) saturate(100%) invert(72%) sepia(43%) saturate(500%) hue-rotate(7deg) brightness(92%) contrast(88%);
 }
 
 .nav-link-custom {
@@ -34,12 +50,12 @@
 
 /* ── Hero ────────────────────────────────────────────── */
 .hero-section {
-  min-height: 100vh;
+  min-height: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 120px 24px 80px;
+  padding: 120px 24px 24px;
   position: relative;
   z-index: 1;
   overflow-x: hidden;
@@ -80,8 +96,15 @@
   font-size: clamp(1.1rem, 2.5vw, 1.5rem);
   color: var(--text-secondary);
   letter-spacing: 0.04em;
-  margin: 0 auto 2.5rem;
-  white-space: nowrap;
+  margin: 0 auto;
+  max-width: 100%;
+  white-space: normal;
+}
+
+.home-countdown-section {
+  padding: 0 24px 80px;
+  position: relative;
+  z-index: 1;
 }
 
 /* ── Stat banner ─────────────────────────────────────── */

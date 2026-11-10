@@ -1,6 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import nakshatraLogo from '../assets/NakshatraLogo.png';
 
 export default function Footer() {
   return (
@@ -8,8 +9,9 @@ export default function Footer() {
 <Container>
         <Row className="align-items-start g-4">
           <Col md={4}>
-            <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.3rem', fontWeight: 700, color: 'var(--gold)', letterSpacing: '0.18em', marginBottom: '0.5rem' }}>
-              <span aria-hidden="true">✦</span> NAKSHATRA
+            <div className="footer-brand" style={{ fontFamily: 'var(--font-heading)', fontSize: '1.3rem', fontWeight: 700, color: 'var(--gold)', letterSpacing: '0.18em', marginBottom: '0.5rem' }}>
+              <img className="brand-logo" src={nakshatraLogo} alt="" />
+              NAKSHATRA
             </div>
             <p style={{ margin: 0, lineHeight: 1.6, color: 'var(--text-secondary)' }}>
               The premier Indian classical dance competition at the University of Wisconsin–Madison.

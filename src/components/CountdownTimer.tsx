@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 
-// Placeholder date — update this when the competition date is confirmed
-const COMPETITION_DATE = new Date('2026-04-19T18:00:00');
+const COMPETITION_DATE = new Date('2027-02-27T00:00:00');
 
 interface TimeLeft {
   days: number;
@@ -62,9 +61,8 @@ export default function CountdownTimer() {
         color: 'var(--text-secondary)',
         marginTop: '1.5rem',
         marginBottom: 0,
-        opacity: 0.7,
       }}>
-        Date TBD — placeholder shown
+        February 27, 2027
       </p>
     </div>
   );

@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
+import nakshatraLogo from '../assets/NakshatraLogo.png';
 import '../App.css';
 
 export default function NavBar() {
@@ -9,7 +10,8 @@ export default function NavBar() {
     <Navbar expand="lg" fixed="top" className="nakshatra-navbar">
       <Container>
         <Navbar.Brand as={NavLink} to="/" className="navbar-brand-text">
-          <span aria-hidden="true">✦</span> NAKSHATRA
+          <img className="brand-logo" src={nakshatraLogo} alt="" />
+          NAKSHATRA
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="main-nav"

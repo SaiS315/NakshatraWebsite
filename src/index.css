@@ -6,8 +6,6 @@
   --purple:        #6b21a8;
   --purple-light:  #a78bfa;
   --purple-glow:   rgba(107, 33, 168, 0.35);
-  --blue:          #3b82f6;
-  --blue-glow:     rgba(59, 130, 246, 0.3);
   --gold:          #c9a84c;
   --gold-bright:   #e2c06a;
   --gold-muted:    #8a6e28;
@@ -75,28 +73,6 @@ a:hover { color: var(--text-primary); }
   border: 1px solid var(--border-gold);
   box-shadow: 0 0 20px rgba(201, 168, 76, 0.1);
   border-radius: 8px;
-}
-
-.btn-gradient {
-  background: linear-gradient(135deg, var(--purple) 0%, var(--blue) 100%);
-  border: none;
-  color: #fff;
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 0.85rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 0.65rem 2rem;
-  border-radius: 4px;
-  transition: box-shadow 0.25s, transform 0.15s;
-  cursor: pointer;
-}
-
-.btn-gradient:hover, .btn-gradient:focus {
-  box-shadow: 0 0 22px var(--purple-glow), 0 0 10px var(--blue-glow);
-  transform: translateY(-1px);
-  color: #fff;
-  background: linear-gradient(135deg, var(--purple) 0%, var(--blue) 100%);
 }
 
 .btn-ghost {
@@ -182,13 +158,13 @@ a:hover { color: var(--text-primary); }
 .divider-line-left {
   flex: 1;
   height: 1px;
-  background: linear-gradient(to right, transparent, var(--gold-muted));
+  background-color: var(--gold-muted);
 }
 
 .divider-line-right {
   flex: 1;
   height: 1px;
-  background: linear-gradient(to left, transparent, var(--gold-muted));
+  background-color: var(--gold-muted);
 }
 
 .divider-diamond {
