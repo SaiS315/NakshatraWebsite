@@ -9,9 +9,12 @@ export default function Footer() {
 <Container>
         <Row className="align-items-start g-4">
           <Col md={4}>
-            <div className="footer-brand" style={{ fontFamily: 'var(--font-heading)', fontSize: '1.3rem', fontWeight: 700, color: 'var(--gold)', letterSpacing: '0.18em', marginBottom: '0.5rem' }}>
-              <img className="brand-logo" src={nakshatraLogo} alt="" />
-              NAKSHATRA
+            <div className="footer-brand" style={{ fontSize: '1.3rem', color: 'var(--gold)', marginBottom: '0.5rem' }}>
+              <span className="brand-wordmark" aria-hidden="true">
+                <img className="brand-logo" src={nakshatraLogo} alt="" />
+                AKSHATRA
+              </span>
+              <span className="visually-hidden">Nakshatra</span>
             </div>
             <p style={{ margin: 0, lineHeight: 1.6, color: 'var(--text-secondary)' }}>
               The premier Indian classical dance competition at the University of Wisconsin–Madison.

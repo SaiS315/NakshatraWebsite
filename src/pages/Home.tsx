@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <section className="hero-section">
         <div style={{ textAlign: 'center', width: '100%', maxWidth: '1300px', padding: '0 1rem' }}>
-          <h1 className="hero-title">NAKSHATRA</h1>
+          <h1 className="hero-title">Nakshatra</h1>
           <p className="hero-subtitle">
             UW–Madison&apos;s Premier Indian Classical Dance Competition
           </p>

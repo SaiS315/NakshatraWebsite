@@ -34,16 +34,8 @@ export default function CountdownTimer() {
 
   return (
     <div className="glass-card" style={{ padding: 'clamp(1.5rem, 4vw, 3rem) clamp(1rem, 4vw, 3rem)', textAlign: 'center' }}>
-      <p style={{
-        fontFamily: 'var(--font-body)',
-        fontSize: '0.7rem',
-        fontWeight: 600,
-        letterSpacing: '0.3em',
-        textTransform: 'uppercase',
-        color: 'var(--text-secondary)',
-        marginBottom: '1.5rem',
-      }}>
-        Competition Countdown
+      <p className="countdown-title">
+        Countdown To A Whole New World
       </p>
 
       <div className="countdown-wrap">
@@ -55,13 +47,7 @@ export default function CountdownTimer() {
         ))}
       </div>
 
-      <p style={{
-        fontFamily: 'var(--font-body)',
-        fontSize: '0.72rem',
-        color: 'var(--text-secondary)',
-        marginTop: '1.5rem',
-        marginBottom: 0,
-      }}>
+      <p className="countdown-date">
         February 27, 2027
       </p>
     </div>

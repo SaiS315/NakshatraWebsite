@@ -1,33 +1,49 @@
 /* ── Navbar ─────────────────────────────────────────── */
 .nakshatra-navbar {
-  background-color: rgba(8, 8, 24, 0.82) !important;
-  border-bottom: 1px solid var(--border-gold);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background-color: transparent !important;
+  border-bottom: 0;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease, backdrop-filter 0.25s ease;
 }
 
-.navbar-brand-text,
+.nakshatra-navbar-scrolled {
+  background-color: rgba(8, 8, 24, 0.94) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
 .footer-brand {
   display: inline-flex;
   align-items: center;
   line-height: 1;
 }
 
-.navbar-brand-text {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--gold) !important;
-  letter-spacing: 0.18em;
-  text-shadow: 0 0 18px var(--gold-glow);
+.navbar-logo {
+  display: block;
+  width: 3.25rem;
+  height: 3.25rem;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(72%) sepia(43%) saturate(500%) hue-rotate(7deg) brightness(92%) contrast(88%);
+}
+
+.brand-wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  font-family: var(--font-wordmark);
+  font-size: inherit;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  line-height: 1;
 }
 
 .brand-logo {
-  width: 1.75rem;
-  height: 1.75rem;
+  display: block;
+  width: 1.15em;
+  height: 1.15em;
   object-fit: contain;
-  vertical-align: middle;
-  margin-right: 0.4rem;
+  margin-right: 0.04em;
+  flex-shrink: 0;
+  transform: translateY(0.08em);
   filter: brightness(0) saturate(100%) invert(72%) sepia(43%) saturate(500%) hue-rotate(7deg) brightness(92%) contrast(88%);
 }
 
@@ -55,7 +71,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 120px 24px 24px;
+  padding: 88px 24px 24px;
   position: relative;
   z-index: 1;
   overflow-x: hidden;
@@ -65,15 +81,14 @@
 
 .hero-title {
   font-family: var(--font-heading);
-  font-size: clamp(2.8rem, 10vw, 9rem);
+  font-size: clamp(1.6rem, 9vw, 9rem);
   font-weight: 700;
   color: var(--gold);
-  letter-spacing: 0.18em;
-  text-indent: 0.18em; /* offset centering shift caused by letter-spacing */
+  letter-spacing: 0.08em;
   line-height: 1;
+  white-space: nowrap;
   margin: 0 0 1rem;
   max-width: 100%;
-  word-break: break-word;
   text-shadow:
     0 0 40px rgba(201, 168, 76, 0.65),
     0 0 80px rgba(201, 168, 76, 0.3),
@@ -334,4 +349,101 @@
   font-weight: 700;
   color: var(--gold);
   margin: 0 auto 1rem;
+}
+
+/* ── Sponsors page ──────────────────────────────────── */
+.sponsors-page {
+  padding-bottom: 100px;
+}
+
+.sponsors-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--purple-light);
+  margin-bottom: 0.75rem;
+}
+
+.sponsors-heading {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+}
+
+.sponsors-intro,
+.sponsor-gallery-intro {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.sponsor-form-card {
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.sponsor-section-heading {
+  font-family: var(--font-heading);
+  color: var(--gold);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.sponsor-form-note {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.sponsor-optional {
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+.sponsor-submit {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.sponsor-gallery {
+  margin-top: 5rem;
+}
+
+.sponsor-gallery .sponsor-section-heading {
+  margin-bottom: 0.5rem;
+}
+
+.sponsor-gallery-intro {
+  margin-bottom: 2rem;
+}
+
+.sponsor-logo-placeholder {
+  min-height: 140px;
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-align: center;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed var(--border-gold);
+  border-radius: 6px;
+}
+
+.sponsor-logo-placeholder span:first-child {
+  color: var(--gold-muted);
+  font-size: 1.4rem;
 }

@@ -305,7 +305,7 @@ export default function About() {
             </Reveal>
 
             {/* Cards stagger in after the title */}
-            <Row className="g-2">
+            <Row className="g-2 justify-content-center">
               {dept.members.map((m, mi) => (
                 <Col key={mi} xs={12} sm={6} md={4} lg={3}>
                   <Reveal delay={0.1 + mi * 0.08}>

@@ -7,6 +7,7 @@ import Competition from './pages/Competition';
 import About from './pages/About';
 import Events from './pages/Events';
 import Apply from './pages/Apply';
+import Sponsors from './pages/Sponsors';
 import './App.css';
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/events" element={<Events />} />
           <Route path="/apply" element={<Apply />} />
+          <Route path="/sponsors" element={<Sponsors />} />
         </Routes>
       </main>
       <Footer />

@@ -18,6 +18,7 @@
   /* Fonts */
   --font-heading:  'Cormorant Garant', Georgia, serif;
   --font-body:     'Inter', system-ui, sans-serif;
+  --font-wordmark: Georgia, 'Times New Roman', serif;
 
   font: 15px/1.7 var(--font-body);
   color: var(--text-primary);
@@ -128,6 +129,15 @@ a:hover { color: var(--text-primary); }
   min-width: 70px;
 }
 
+.countdown-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--gold);
+  margin: 0 0 1.5rem;
+}
+
 .countdown-number {
   font-family: var(--font-heading);
   font-size: clamp(3rem, 7vw, 5.5rem);
@@ -135,6 +145,14 @@ a:hover { color: var(--text-primary); }
   color: var(--gold);
   line-height: 1;
   text-shadow: 0 0 30px var(--gold-glow);
+}
+
+.countdown-date {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin: 1.5rem 0 0;
 }
 
 .countdown-label {
