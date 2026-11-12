@@ -5,7 +5,17 @@ export default function Home() {
   return (
     <>
       <section className="hero-section">
-        <div style={{ textAlign: 'center', width: '100%', maxWidth: '1300px', padding: '0 1rem' }}>
+        <video
+          className="hero-background-video"
+          src={`${import.meta.env.BASE_URL}videos/home-background.mp4`}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          aria-hidden="true"
+        />
+        <div className="hero-content">
           <h1 className="hero-title">Nakshatra</h1>
           <p className="hero-subtitle">
             UW–Madison&apos;s Premier Indian Classical Dance Competition

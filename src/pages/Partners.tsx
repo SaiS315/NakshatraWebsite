@@ -1,8 +1,15 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import bubblrLogo from '../assets/bubblrlogo.png';
+import lmntLogo from '../assets/lmntlogo.png';
+import canesLogo from '../assets/caneslogo.png';
 
-const sponsorPlaceholders = Array.from({ length: 6 }, (_, index) => index + 1);
+const partnerLogos = [
+  { name: 'Bubblr', image: bubblrLogo },
+  { name: 'LMNT', image: lmntLogo },
+  { name: 'Canes', image: canesLogo },
+];
 
 function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
   event.preventDefault();
@@ -58,8 +65,8 @@ export default function Sponsors() {
                     <input id="sponsor-name" name="name" className="form-control form-control-dark" autoComplete="name" required />
                   </Col>
                   <Col md={6}>
-                    <label className="form-label-dark" htmlFor="sponsor-organization">Company or Organization</label>
-                    <input id="sponsor-organization" name="organization" className="form-control form-control-dark" autoComplete="organization" required />
+                    <label className="form-label-dark" htmlFor="sponsor-organization">Company or Organization <span className="sponsor-optional">(optional)</span></label>
+                    <input id="sponsor-organization" name="organization" className="form-control form-control-dark" autoComplete="organization" />
                   </Col>
                   <Col md={6}>
                     <label className="form-label-dark" htmlFor="sponsor-email">Email</label>
@@ -92,19 +99,18 @@ export default function Sponsors() {
           </Col>
         </Row>
 
-        <section className="sponsor-gallery" aria-labelledby="past-sponsors-heading">
+        <section className="sponsor-gallery" aria-labelledby="past-partners-heading">
           <div className="text-center">
-            <h2 id="past-sponsors-heading" className="sponsor-section-heading">Past Sponsors</h2>
+            <h2 id="past-partners-heading" className="sponsor-section-heading">Past Partners</h2>
             <p className="sponsor-gallery-intro">
               We are grateful to the organizations that have supported Nakshatra.
             </p>
           </div>
           <Row className="g-3 justify-content-center">
-            {sponsorPlaceholders.map(number => (
-              <Col key={number} xs={6} sm={4} lg={3}>
-                <div className="sponsor-logo-placeholder" aria-label={`Past sponsor logo placeholder ${number}`}>
-                  <span aria-hidden="true">✦</span>
-                  <span>Sponsor Logo</span>
+            {partnerLogos.map(({ name, image }) => (
+              <Col key={name} xs={12} sm={6} lg={4}>
+                <div className="partner-logo-card" aria-label={`${name} logo`}>
+                  <img className="partner-logo-image" src={image} alt={`${name} logo`} />
                 </div>
               </Col>
             ))}

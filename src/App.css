@@ -5,6 +5,23 @@
   transition: background-color 0.25s ease, box-shadow 0.25s ease, backdrop-filter 0.25s ease;
 }
 
+.navbar-container {
+  flex-wrap: nowrap !important;
+}
+
+.navbar-links {
+  flex: 1;
+  flex-wrap: nowrap !important;
+  justify-content: flex-end;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.navbar-links::-webkit-scrollbar {
+  display: none;
+}
+
 .nakshatra-navbar-scrolled {
   background-color: rgba(8, 8, 24, 0.94) !important;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
@@ -48,6 +65,7 @@
 }
 
 .nav-link-custom {
+  flex: 0 0 auto;
   font-family: var(--font-body);
   color: var(--text-secondary) !important;
   font-size: 0.8rem;
@@ -56,6 +74,7 @@
   text-transform: uppercase;
   transition: color 0.2s, text-shadow 0.2s;
   padding: 0.4rem 0.8rem !important;
+  white-space: nowrap;
 }
 
 .nav-link-custom:hover,
@@ -64,9 +83,22 @@
   text-shadow: 0 0 12px var(--gold-glow);
 }
 
+@media (max-width: 575.98px) {
+  .navbar-logo {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .nav-link-custom {
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+    padding: 0.4rem 0.45rem !important;
+  }
+}
+
 /* ── Hero ────────────────────────────────────────────── */
 .hero-section {
-  min-height: 0;
+  min-height: clamp(32rem, 72vh, 60rem);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,9 +106,38 @@
   padding: 88px 24px 24px;
   position: relative;
   z-index: 1;
-  overflow-x: hidden;
+  overflow: hidden;
   width: 100%;
   box-sizing: border-box;
+  background: var(--navy);
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(8, 8, 24, 0.4) 0%, rgba(8, 8, 24, 0.48) 65%, var(--navy) 100%),
+    rgba(8, 8, 24, 0.2);
+  pointer-events: none;
+}
+
+.hero-background-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 1rem;
 }
 
 .hero-title {
@@ -117,9 +178,15 @@
 }
 
 .home-countdown-section {
-  padding: 0 24px 80px;
+  padding: 48px 24px 80px;
   position: relative;
   z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-background-video {
+    display: none;
+  }
 }
 
 /* ── Stat banner ─────────────────────────────────────── */
@@ -351,6 +418,66 @@
   margin: 0 auto 1rem;
 }
 
+.team-photo-marquee {
+  width: 100%;
+  overflow: hidden;
+  margin: 2rem 0 3rem;
+}
+
+.team-photo-track {
+  display: flex;
+  width: max-content;
+  animation: team-photo-loop 80s linear infinite;
+}
+
+.team-photo-group {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 1rem;
+  padding-right: 1rem;
+}
+
+.team-photo-frame {
+  flex: 0 0 clamp(240px, 32vw, 420px);
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border: 1px solid var(--border-purple);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.team-photo-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-photo-marquee:hover .team-photo-track {
+  animation-play-state: paused;
+}
+
+@keyframes team-photo-loop {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .team-photo-marquee {
+    overflow-x: auto;
+  }
+
+  .team-photo-track {
+    width: auto;
+    animation: none;
+  }
+
+  .team-photo-group[aria-hidden='true'] {
+    display: none;
+  }
+}
+
 /* ── Sponsors page ──────────────────────────────────── */
 .sponsors-page {
   padding-bottom: 100px;
@@ -423,27 +550,19 @@
   margin-bottom: 2rem;
 }
 
-.sponsor-logo-placeholder {
-  min-height: 140px;
+.partner-logo-card {
+  min-height: 160px;
   height: 100%;
-  padding: 1rem;
+  padding: 0.75rem 0;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  text-align: center;
-  color: var(--text-secondary);
-  font-family: var(--font-body);
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px dashed var(--border-gold);
-  border-radius: 6px;
 }
 
-.sponsor-logo-placeholder span:first-child {
-  color: var(--gold-muted);
-  font-size: 1.4rem;
+.partner-logo-image {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  max-height: 120px;
+  object-fit: contain;
 }
