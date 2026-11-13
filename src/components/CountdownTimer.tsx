@@ -33,7 +33,7 @@ export default function CountdownTimer() {
   const values = [timeLeft.days, timeLeft.hours, timeLeft.minutes, timeLeft.seconds];
 
   return (
-    <div className="glass-card" style={{ padding: 'clamp(1.5rem, 4vw, 3rem) clamp(1rem, 4vw, 3rem)', textAlign: 'center' }}>
+    <div style={{ padding: 'clamp(1.5rem, 4vw, 3rem) clamp(1rem, 4vw, 3rem)', textAlign: 'center' }}>
       <p className="countdown-title">
         Countdown To A Whole New World
       </p>

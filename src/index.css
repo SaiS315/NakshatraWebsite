@@ -16,9 +16,10 @@
   --border-purple: rgba(107, 33, 168, 0.45);
 
   /* Fonts */
-  --font-heading:  'Cormorant Garant', Georgia, serif;
-  --font-body:     'Inter', system-ui, sans-serif;
+  --font-heading:  Georgia, 'Times New Roman', serif;
+  --font-body:     Georgia, 'Times New Roman', serif;
   --font-wordmark: Georgia, 'Times New Roman', serif;
+  --bs-body-font-family: var(--font-body);
 
   font: 15px/1.7 var(--font-body);
   color: var(--text-primary);
@@ -29,6 +30,7 @@
 
 body {
   margin: 0;
+  font-family: var(--font-body);
   background-color: var(--navy);
   color: var(--text-primary);
   min-height: 100vh;
@@ -45,7 +47,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   color: var(--gold);
-  font-weight: 600;
+  font-weight: 500 !important;
   letter-spacing: 0.04em;
 }
 
@@ -132,7 +134,7 @@ a:hover { color: var(--text-primary); }
 .countdown-title {
   font-family: var(--font-heading);
   font-size: clamp(1.5rem, 3.5vw, 2.5rem);
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.04em;
   color: var(--gold);
   margin: 0 0 1.5rem;
@@ -149,8 +151,8 @@ a:hover { color: var(--text-primary); }
 
 .countdown-date {
   font-family: var(--font-body);
-  font-size: clamp(1rem, 2vw, 1.35rem);
-  font-weight: 500;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 700;
   color: var(--text-secondary);
   margin: 1.5rem 0 0;
 }

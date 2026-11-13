@@ -3,19 +3,25 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import teamPhoto0264 from '../assets/TeamPhotos/team-img-0264.webp';
+import teamPhoto06960 from '../assets/TeamPhotos/team-06960.webp';
 import teamPhoto0118 from '../assets/TeamPhotos/team-img-0118.webp';
 import teamPhoto0163 from '../assets/TeamPhotos/team-img-0163.webp';
+import teamPhoto06841 from '../assets/TeamPhotos/team-06841.webp';
 import teamPhoto0178 from '../assets/TeamPhotos/team-img-0178.webp';
 import teamPhoto0193 from '../assets/TeamPhotos/team-img-0193.webp';
+import teamPhoto06885 from '../assets/TeamPhotos/team-06885.webp';
 import teamPhoto0224 from '../assets/TeamPhotos/team-img-0224.webp';
 import teamPhoto0228 from '../assets/TeamPhotos/team-img-0228.webp';
 
 const teamPhotos = [
   { src: teamPhoto0264, alt: 'Dancers in green and orange costumes performing together' },
+  { src: teamPhoto06960, alt: 'A dance team holding a banner after their performance' },
   { src: teamPhoto0118, alt: 'Classical dancers performing in a line under stage lights' },
   { src: teamPhoto0163, alt: 'Dancers in pink costumes performing a classical dance' },
+  { src: teamPhoto06841, alt: 'A dance team celebrating with their trophy' },
   { src: teamPhoto0178, alt: 'Classical dancers performing under red stage lighting' },
   { src: teamPhoto0193, alt: 'Dancers in orange and blue costumes performing on stage' },
+  { src: teamPhoto06885, alt: 'A team of dancers and organizers celebrating with a trophy' },
   { src: teamPhoto0224, alt: 'A group of classical dancers performing under red stage lighting' },
   { src: teamPhoto0228, alt: 'Dancers in magenta and purple costumes performing on stage' },
 ];

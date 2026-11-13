@@ -114,7 +114,7 @@ const departments: {
     dept: 'Fundraising',
     email: 'nakshatrauw.finance@gmail.com',
     members: [
-      { name: 'Sneha Machandani', photo: snehaPhoto },
+      { name: 'Sneha Manchandani', photo: snehaPhoto },
       { name: 'Sripada Thammera', photo: sripadaPhoto },
       { name: 'Ashwath Vijayaraghavan', photo: ashwathPhoto },
     ],
@@ -372,7 +372,7 @@ export default function About() {
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.3em', textTransform: 'uppercase', color: 'var(--text-secondary)', marginBottom: '0.75rem' }}>
                   Affiliation
                 </p>
-                <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.15rem', color: 'var(--text-primary)', fontWeight: 600, marginBottom: '0.5rem' }}>
+                <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.15rem', color: 'var(--text-primary)', fontWeight: 500, marginBottom: '0.5rem' }}>
                   Multicultural Student Center (MSC)
                 </p>
                 <p style={{ fontFamily: 'var(--font-body)', color: 'var(--text-secondary)', fontSize: '0.9rem', margin: 0 }}>
@@ -387,7 +387,7 @@ export default function About() {
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.3em', textTransform: 'uppercase', color: 'var(--text-secondary)', marginBottom: '0.75rem' }}>
                   Affiliation
                 </p>
-                <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.15rem', color: 'var(--text-primary)', fontWeight: 600, marginBottom: '0.5rem' }}>
+                <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.15rem', color: 'var(--text-primary)', fontWeight: 500, marginBottom: '0.5rem' }}>
                   International Student Services (ISS)
                 </p>
                 <p style={{ fontFamily: 'var(--font-body)', color: 'var(--text-secondary)', fontSize: '0.9rem', margin: 0 }}>
@@ -402,7 +402,7 @@ export default function About() {
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.3em', textTransform: 'uppercase', color: 'var(--text-secondary)', marginBottom: '0.75rem' }}>
                   Accreditation
                 </p>
-                <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.15rem', color: 'var(--text-primary)', fontWeight: 600, marginBottom: '0.5rem' }}>
+                <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.15rem', color: 'var(--text-primary)', fontWeight: 500, marginBottom: '0.5rem' }}>
                   SOLI Accredited RSO
                 </p>
                 <p style={{ fontFamily: 'var(--font-body)', color: 'var(--text-secondary)', fontSize: '0.9rem', margin: 0 }}>

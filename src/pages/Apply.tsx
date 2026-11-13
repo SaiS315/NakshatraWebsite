@@ -190,7 +190,7 @@ export default function Apply() {
                 ) : submitted ? (
                   <>
                     <div style={{ fontSize: '2rem', color: 'var(--gold)', marginBottom: '0.5rem' }}><span aria-hidden="true">✦</span></div>
-                    <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.3rem', color: 'var(--gold)', fontWeight: 600, marginBottom: '0.5rem' }}>
+                    <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.3rem', color: 'var(--gold)', fontWeight: 500, marginBottom: '0.5rem' }}>
                       Application Received!
                     </p>
                     <p style={{ color: 'var(--text-secondary)', fontSize: '0.92rem', margin: 0 }}>
