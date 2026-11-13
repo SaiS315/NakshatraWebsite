@@ -387,6 +387,48 @@
   border: 2px solid var(--navy);
 }
 
+.application-timeline {
+  list-style: none;
+  margin: 0 auto;
+  max-width: 760px;
+  padding: 0;
+}
+
+@media (min-width: 992px) {
+  .application-timeline {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    max-width: none;
+    padding-top: 1.5rem;
+    position: relative;
+  }
+
+  .application-timeline::before {
+    background: var(--gold);
+    content: '';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 2rem;
+  }
+
+  .application-timeline .timeline-item {
+    padding: 1rem 0.2rem 0;
+    text-align: center;
+  }
+
+  .application-timeline .timeline-item::before {
+    display: none;
+  }
+
+  .application-timeline .timeline-dot {
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+}
+
 /* ── Team cards ──────────────────────────────────────── */
 .team-card {
   text-align: center;
@@ -739,7 +781,35 @@
 }
 
 .sponsor-form-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0;
+  box-shadow: none;
   padding: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.sponsor-form-card .form-control-dark,
+.sponsor-form-card .form-select-dark {
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.sponsor-form-card .form-control-dark:focus,
+.sponsor-form-card .form-select-dark:focus {
+  border-color: var(--gold) !important;
+  box-shadow: none !important;
+}
+
+.sponsor-form-card .sponsor-submit {
+  border-radius: 0;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.sponsor-form-card .sponsor-submit:hover {
+  box-shadow: none;
 }
 
 .sponsor-section-heading {

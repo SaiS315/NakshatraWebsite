@@ -136,7 +136,7 @@ export default function Competition() {
 
         <section className="competition-order" aria-labelledby="show-order-heading">
           <h2 id="show-order-heading" className="competition-section-title">
-            Show Order
+            3.0 Show Order
           </h2>
           <p>TBD</p>
         </section>
