@@ -1,5 +1,5 @@
 import Container from 'react-bootstrap/Container';
-import originsLogo from '../assets/OriginsLogo.png';
+import originsLogo from '../assets/Origins_Logo.png';
 import aharyaLogo from '../assets/PreviousTeams/aharya_white.png';
 import avahitaLogo from '../assets/PreviousTeams/avahita_white.png';
 import omkaraLogo from '../assets/PreviousTeams/omkara_white.png';
@@ -27,18 +27,21 @@ const lastYearWinners = [
     team: 'UCSD Pushpanjali',
     originsNote: '5th at Origins 2026',
     image: ucSdPushpanjaliPhoto,
+    performanceUrl: 'https://www.youtube.com/watch?v=p_c20G5tnSs',
   },
   {
     place: '2nd',
     team: 'JHU Shakti',
     originsNote: 'Origins 2026 Winners',
-    image: jhuShaktiPhoto,
+    image: uciAvahitaPhoto,
+    performanceUrl: 'https://www.youtube.com/watch?v=JspuJ_tg09g',
   },
   {
     place: '3rd',
     team: 'UCI Avahita',
     originsNote: null,
-    image: uciAvahitaPhoto,
+    image: jhuShaktiPhoto,
+    performanceUrl: 'https://www.youtube.com/watch?v=fKMhzsT-66I&t=211s',
   },
 ];
 
@@ -103,13 +106,24 @@ export default function Competition() {
             Last Year&apos;s Winners
           </h2>
           <div className="competition-winners">
-            {lastYearWinners.map(({ place, team, originsNote, image }) => (
+            {lastYearWinners.map(({ place, team, originsNote, image, performanceUrl }) => (
               <article className="competition-winner-card" key={team}>
-                <img
-                  className="competition-winner-photo"
-                  src={image}
-                  alt={`${team}, ${place} place`}
-                />
+                <a
+                  className="competition-winner-video-link"
+                  href={performanceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Watch ${team}'s performance on YouTube`}
+                >
+                  <img
+                    className="competition-winner-photo"
+                    src={image}
+                    alt={`${team}, ${place} place`}
+                  />
+                  <span className="competition-winner-video-overlay" aria-hidden="true">
+                    Watch performance
+                  </span>
+                </a>
                 <p className="competition-winner-place">{place} Place</p>
                 <h3 className="competition-winner-name">{team}</h3>
                 {originsNote && (

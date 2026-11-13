@@ -22,7 +22,6 @@ export default function NavBar() {
           <img className="navbar-logo" src={nakshatraLogo} alt="" />
         </Navbar.Brand>
         <Nav className="navbar-links ms-auto gap-1" aria-label="Main navigation">
-          <Nav.Link as={NavLink} to="/" end className="nav-link-custom">Home</Nav.Link>
           <Nav.Link as={NavLink} to="/competition" className="nav-link-custom">Competition</Nav.Link>
           <Nav.Link as={NavLink} to="/teams" className="nav-link-custom">Teams</Nav.Link>
           <Nav.Link as={NavLink} to="/about" className="nav-link-custom">About</Nav.Link>

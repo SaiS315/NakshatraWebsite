@@ -29,6 +29,7 @@ import srikarPhoto from '../assets/ExecBoardPhotos/Srikar.jpg';
 import sripadaPhoto from '../assets/ExecBoardPhotos/Sripada.jpg';
 import siratPhoto from '../assets/ExecBoardPhotos/Sirat.jpg';
 import srutiPhoto from '../assets/ExecBoardPhotos/Sruti.jpg';
+import fullBoardPhoto from '../assets/FullBoard.jpg';
 
 // ── Scroll-reveal hook ────────────────────────────────────────
 function useReveal() {
@@ -193,13 +194,6 @@ const departments: {
   },
 ];
 
-const stats = [
-  { value: '8',  label: 'Competing Teams' },
-  { value: '1',  label: 'Stage' },
-  { value: '6+', label: 'Dance Forms' },
-  { value: 'UW', label: 'Madison' },
-];
-
 function Divider() {
   return (
     <div style={{ display: 'flex', alignItems: 'center', margin: '3.5rem 0' }}>
@@ -219,54 +213,45 @@ export default function About() {
         {/* Heading */}
         <Row className="text-center mb-2">
           <Col>
-            <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.3em', textTransform: 'uppercase', color: 'var(--purple-light)', marginBottom: '0.75rem' }}>
-              Who We Are
-            </p>
             <h1 style={{ fontFamily: 'var(--font-heading)', color: 'var(--gold)', fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 700, letterSpacing: '0.08em', marginBottom: '1.5rem' }}>
-              About Us
+              What is Nakshatra?
             </h1>
           </Col>
         </Row>
 
         {/* Narrative */}
-        <Row className="justify-content-center mb-4">
-          <Col lg={8}>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: 1.9, marginBottom: '1.25rem' }}>
-              Nakshatra is the premier Indian classical dance competition at the University of
-              Wisconsin-Madison, showcasing the rich traditions of Indian dance. This annual event
-              invites eight highly skilled Indian classical dance teams from across the nation.
-            </p>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: 1.9, marginBottom: '1.25rem' }}>
-              The competition is organized by a dedicated executive board, supported by liaisons
-              and event managers, who work tirelessly to deliver a spectacular cultural showcase.
-              Nakshatra not only celebrates the art of Indian classical dance but also enriches the
-              Madison community by offering a glimpse into various classical Indian dance forms.
-            </p>
+        <Row className="align-items-center mb-4">
+          <Col lg={7}>
             <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: 1.9, margin: 0 }}>
-              Affiliated with the Multicultural Student Center at the University of Wisconsin–Madison,
-              Nakshatra is open to all students and welcomes anyone passionate about Indian culture,
-              the performing arts, and community-building.
+              Placeholder text for now.
             </p>
           </Col>
-        </Row>
-
-        {/* Stats */}
-        <Row className="justify-content-center mb-2">
-          <Col lg={8}>
-            <div className="glass-card" style={{ padding: '2rem 1rem', marginTop: '1rem' }}>
-              <Row className="g-3 text-center">
-                {stats.map(s => (
-                  <Col key={s.label} xs={6} md={3}>
-                    <div style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 700, color: 'var(--gold)', lineHeight: 1, textShadow: '0 0 20px var(--gold-glow)' }}>
-                      {s.value}
-                    </div>
-                    <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--text-secondary)', marginTop: '0.4rem' }}>
-                      {s.label}
-                    </div>
-                  </Col>
-                ))}
-              </Row>
-            </div>
+          <Col lg={5} className="text-center mt-4 mt-lg-0">
+            <img
+              src={fullBoardPhoto}
+              alt="Nakshatra full board"
+              style={{
+                width: '100%',
+                maxWidth: '520px',
+                borderRadius: '12px',
+                border: '1px solid var(--border-gold)',
+                boxShadow: '0 12px 30px rgba(0, 0, 0, 0.2)',
+                display: 'block',
+                margin: '0 auto',
+              }}
+            />
+            <p style={{
+              marginTop: '1rem',
+              marginBottom: 0,
+              color: 'var(--gold)',
+              fontFamily: 'var(--font-heading)',
+              fontSize: 'clamp(0.9rem, 1.6vw, 1.2rem)',
+              fontWeight: 700,
+              letterSpacing: '0.06em',
+              whiteSpace: 'nowrap',
+            }}>
+              Nakshatra 3.0 Executive Board
+            </p>
           </Col>
         </Row>
 

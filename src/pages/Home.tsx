@@ -20,6 +20,9 @@ export default function Home() {
           <p className="hero-subtitle">
             UW–Madison&apos;s Premier Indian Classical Dance Competition
           </p>
+          <p className="hero-event-label">
+            An Official Origins 2027 Bid Competition
+          </p>
         </div>
       </section>
 

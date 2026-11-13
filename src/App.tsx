@@ -7,7 +7,7 @@ import Competition from './pages/Competition';
 import About from './pages/About';
 import Teams from './pages/Teams';
 import Apply from './pages/Apply';
-import Sponsors from './pages/Partners';
+import Sponsors from './pages/Sponsors';
 import './App.css';
 
 export default function App() {

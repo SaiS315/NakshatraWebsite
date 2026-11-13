@@ -1,14 +1,18 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import raisingCaneLogo from '../assets/raising_canes.png';
+import aashramRealtyLogo from '../assets/aashram_realty.png';
+import lmntLogo from '../assets/lmnt_logo_transparent.png';
 import bubblrLogo from '../assets/bubblrlogo.png';
-import lmntLogo from '../assets/lmntlogo.png';
-import canesLogo from '../assets/caneslogo.png';
+import mirchMasalaLogo from '../assets/mirch_masala.png';
 
 const partnerLogos = [
-  { name: 'Bubblr', image: bubblrLogo },
+  { name: "Raising Cane's", image: raisingCaneLogo },
+  { name: 'Aashram Realty', image: aashramRealtyLogo },
   { name: 'LMNT', image: lmntLogo },
-  { name: 'Canes', image: canesLogo },
+  { name: 'Bubblr', image: bubblrLogo },
+  { name: 'Mirch Masala', image: mirchMasalaLogo },
 ];
 
 function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -91,7 +95,7 @@ export default function Sponsors() {
                     <textarea id="sponsor-message" name="message" className="form-control form-control-dark" rows={4} placeholder="Share any questions or details about your sponsorship idea." required />
                   </Col>
                   <Col xs={12}>
-                    <button className="btn-ghost sponsor-submit" type="submit">Continue to Email</button>
+                    <button className="btn-ghost sponsor-submit" type="submit">Submit</button>
                   </Col>
                 </Row>
               </form>
