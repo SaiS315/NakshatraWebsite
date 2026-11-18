@@ -2,11 +2,11 @@ import { useState, type FormEvent } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import raisingCaneLogo from '../assets/raising_canes.png';
-import aashramRealtyLogo from '../assets/aashram_realty.png';
-import lmntLogo from '../assets/lmnt_logo_transparent.png';
+import raisingCaneLogo from '../assets/raising_canes.webp';
+import aashramRealtyLogo from '../assets/aashram_realty.webp';
+import lmntLogo from '../assets/lmnt_logo_transparent.webp';
 import bubblrLogo from '../assets/bubblrlogo.png';
-import mirchMasalaLogo from '../assets/mirch_masala.png';
+import mirchMasalaLogo from '../assets/mirch_masala.webp';
 
 const partnerLogos = [
   { name: "Raising Cane's", image: raisingCaneLogo },
@@ -162,7 +162,7 @@ export default function Sponsors() {
             {partnerLogos.map(({ name, image }) => (
               <Col key={name} xs={12} sm={6} lg={4}>
                 <div className="partner-logo-card" aria-label={`${name} logo`}>
-                  <img className="partner-logo-image" src={image} alt={`${name} logo`} />
+                  <img className="partner-logo-image" src={image} alt={`${name} logo`} loading="lazy" />
                 </div>
               </Col>
             ))}

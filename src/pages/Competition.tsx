@@ -1,14 +1,14 @@
 import Container from 'react-bootstrap/Container';
-import originsLogo from '../assets/Origins_Logo.png';
+import originsLogo from '../assets/Origins_Logo.webp';
 import aharyaLogo from '../assets/PreviousTeams/aharya.webp';
 import avahitaLogo from '../assets/PreviousTeams/avahita.webp';
-import mokshaLogo from '../assets/PreviousTeams/moksha.png';
-import natyaBerkLogo from '../assets/PreviousTeams/natya_berk.png';
+import mokshaLogo from '../assets/PreviousTeams/optimized/moksha.webp';
+import natyaBerkLogo from '../assets/PreviousTeams/optimized/natya_berk.webp';
 import nrityamalaLogo from '../assets/PreviousTeams/nrityamala.webp';
 import omkaraLogo from '../assets/PreviousTeams/omkara.webp';
 import pushpanjaliLogo from '../assets/PreviousTeams/pushpanjali.webp';
-import rangamLogo from '../assets/PreviousTeams/rangam.png';
-import rasikasLogo from '../assets/PreviousTeams/rasikas.png';
+import rangamLogo from '../assets/PreviousTeams/optimized/rangam.webp';
+import rasikasLogo from '../assets/PreviousTeams/optimized/rasikas.webp';
 import shaktiLogo from '../assets/PreviousTeams/shakti.webp';
 import taaraLogo from '../assets/PreviousTeams/taara.webp';
 import tuftsPulseLogo from '../assets/PreviousTeams/tufts_pulse.webp';
@@ -108,6 +108,7 @@ export default function Competition() {
             className="competition-origins-logo"
             src={originsLogo}
             alt="Origins Dance Championship logo"
+            loading="lazy"
           />
         </section>
 
@@ -129,6 +130,7 @@ export default function Competition() {
                     className="competition-winner-photo"
                     src={image}
                     alt={`${team}, ${place} place`}
+                    loading="lazy"
                   />
                   <span className="competition-winner-video-overlay" aria-hidden="true">
                     Watch performance
