@@ -24,9 +24,9 @@ export default function NavBar() {
         <Nav className="navbar-links ms-auto gap-1" aria-label="Main navigation">
           <Nav.Link as={NavLink} to="/competition" className="nav-link-custom">Competition</Nav.Link>
           <Nav.Link as={NavLink} to="/teams" className="nav-link-custom">Teams</Nav.Link>
-          <Nav.Link as={NavLink} to="/about" className="nav-link-custom">About</Nav.Link>
-          <Nav.Link as={NavLink} to="/apply" className="nav-link-custom">Apply</Nav.Link>
           <Nav.Link as={NavLink} to="/sponsors" className="nav-link-custom">Sponsors</Nav.Link>
+          <Nav.Link as={NavLink} to="/apply" className="nav-link-custom">Apply</Nav.Link>
+          <Nav.Link as={NavLink} to="/about" className="nav-link-custom">About</Nav.Link>
         </Nav>
       </Container>
     </Navbar>

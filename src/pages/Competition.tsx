@@ -1,12 +1,17 @@
 import Container from 'react-bootstrap/Container';
 import originsLogo from '../assets/Origins_Logo.png';
-import aharyaLogo from '../assets/PreviousTeams/aharya_white.png';
-import avahitaLogo from '../assets/PreviousTeams/avahita_white.png';
-import omkaraLogo from '../assets/PreviousTeams/omkara_white.png';
-import pushpanjaliLogo from '../assets/PreviousTeams/pushpanjali_white.png';
-import shaktiLogo from '../assets/PreviousTeams/shakti_white.png';
-import taaraUclaLogo from '../assets/PreviousTeams/taara_ucla_white.png';
-import tuftsPulseLogo from '../assets/PreviousTeams/tufts_pulse_white.png';
+import aharyaLogo from '../assets/PreviousTeams/aharya.webp';
+import avahitaLogo from '../assets/PreviousTeams/avahita.webp';
+import mokshaLogo from '../assets/PreviousTeams/moksha.png';
+import natyaBerkLogo from '../assets/PreviousTeams/natya_berk.png';
+import nrityamalaLogo from '../assets/PreviousTeams/nrityamala.webp';
+import omkaraLogo from '../assets/PreviousTeams/omkara.webp';
+import pushpanjaliLogo from '../assets/PreviousTeams/pushpanjali.webp';
+import rangamLogo from '../assets/PreviousTeams/rangam.png';
+import rasikasLogo from '../assets/PreviousTeams/rasikas.png';
+import shaktiLogo from '../assets/PreviousTeams/shakti.webp';
+import taaraLogo from '../assets/PreviousTeams/taara.webp';
+import tuftsPulseLogo from '../assets/PreviousTeams/tufts_pulse.webp';
 import ucSdPushpanjaliPhoto from '../assets/TeamPhotos/team-06960.webp';
 import uciAvahitaPhoto from '../assets/TeamPhotos/team-06841.webp';
 import jhuShaktiPhoto from '../assets/TeamPhotos/team-06885.webp';
@@ -14,10 +19,15 @@ import jhuShaktiPhoto from '../assets/TeamPhotos/team-06885.webp';
 const previousTeams = [
   { name: 'Aharya', image: aharyaLogo },
   { name: 'Avahita', image: avahitaLogo },
+  { name: 'Moksha', image: mokshaLogo },
+  { name: 'Natya Berk', image: natyaBerkLogo },
+  { name: 'Nrityamala', image: nrityamalaLogo },
   { name: 'Omkara', image: omkaraLogo },
   { name: 'Pushpanjali', image: pushpanjaliLogo },
+  { name: 'Rangam', image: rangamLogo },
+  { name: 'Rasikas', image: rasikasLogo },
   { name: 'Shakti', image: shaktiLogo },
-  { name: 'Taara UCLA', image: taaraUclaLogo },
+  { name: 'Taara UCLA', image: taaraLogo },
   { name: 'Tufts Pulse', image: tuftsPulseLogo },
 ];
 

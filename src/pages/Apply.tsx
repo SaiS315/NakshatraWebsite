@@ -14,6 +14,46 @@ const timeline = [
   { date: 'Spring 2027', event: 'Competition Weekend' },
 ];
 
+const roles = [
+  {
+    id: 'executive-board',
+    title: 'Executive Board',
+    url: 'https://docs.google.com/forms/d/e/1FAIpQLSd33Rthab5BJcEkEMjmJRAeZZ6ArK_0Xk5flRvQgrU0Tp2MPQ/viewform',
+    description:
+      'Lead the vision and operations of Nakshatra. Executive board members oversee all aspects of the competition, from securing venues and sponsors to managing judges, logistics, marketing, and more.',
+    expectations: [
+      'Roles include Events, Finance, Fundraising, Head Liaisons, Hospitality, Judging, Logistics, Marketing, Philanthropy, Registration, Risk & Affiliation, and Tech.',
+      'Strong organizational and leadership skills',
+      'Significant time commitment throughout the academic year',
+      'Prior event or leadership experience preferred',
+    ],
+  },
+  {
+    id: 'liaison',
+    title: 'Liaison',
+    url: 'https://docs.google.com/forms/d/e/1FAIpQLSe_XhRfAlfuOP2BCeBJVsRSKgYUPfNkTL6JpdR7ydEQyWR0LQ/viewform',
+    description:
+      "Serve as the primary point of contact for your assigned competing dance team throughout competition weekend. Help your team move smoothly through tech rehearsal, hotel room decorating, crafts day, and performances, while supporting their safety and experience from arrival to departure.",
+    expectations: [
+      'Available for the full competition weekend (Spring 2027)',
+      'Able to attend mandatory meetings and SAP/AOD training beforehand',
+      'Complete one concession shift and obtain ServSafe certification',
+    ],
+  },
+  {
+    id: 'event-manager',
+    title: 'Event Manager',
+    url: 'https://docs.google.com/forms/d/e/1FAIpQLSe_XhRfAlfuOP2BCeBJVsRSKgYUPfNkTL6JpdR7ydEQyWR0LQ/viewform',
+    description:
+      'Support the board and liaisons in bringing competition weekend to life. Event managers help set up the mixer, create props and decorations for crafts day, assist during performances and tech time, and fill in for liaison roles when needed.',
+    expectations: [
+      'Available for the full competition weekend (Spring 2027)',
+      'Able to attend mandatory meetings and SAP/AOD training beforehand',
+      'Complete one concession shift and obtain ServSafe certification',
+    ],
+  },
+];
+
 export default function Apply() {
   return (
     <div className="page-wrapper" style={{ paddingBottom: '100px' }}>
@@ -27,26 +67,43 @@ export default function Apply() {
         </Row>
 
         <Row className="justify-content-center">
-          <Col lg={9}>
+          <Col>
             <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', lineHeight: 1.7, textAlign: 'center', marginBottom: '2rem' }}>
-              Interested in being a part of Nakshatra? Fill out the form below so that you're the first to know when we have roles to open up.
+              Interested in being a part of Nakshatra? Explore the roles and expectations below, then select a tile to open its interest form.
             </p>
-            <div
-              className="glass-card"
-              role="status"
-              aria-label="Google Form placeholder"
-              style={{
-                minHeight: '600px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                padding: '2rem',
-                textAlign: 'center',
-                color: 'var(--text-secondary)',
-              }}
-            >
-              Google Form will be embedded here.
-            </div>
+            <section aria-labelledby="open-roles-title">
+              <h2 id="open-roles-title" className="section-title mb-4">
+                <span className="gold-underline">Roles</span>
+              </h2>
+              <Row className="g-4">
+                {roles.map(role => (
+                  <Col key={role.id} md={4}>
+                    <a
+                      className="glass-card role-card role-card-link d-block"
+                      href={role.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`${role.title} responsibilities and expectations. Open interest form in a new tab.`}
+                      style={{ padding: '2rem' }}
+                    >
+                      <h3 style={{ fontFamily: 'var(--font-heading)', color: 'var(--gold)', fontSize: '1.4rem', fontWeight: 700, marginBottom: '0.6rem' }}>
+                        {role.title}
+                      </h3>
+                      <p style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', lineHeight: 1.65, marginBottom: '1rem' }}>
+                        {role.description}
+                      </p>
+                      <h4 style={{ color: 'var(--text-primary)', fontSize: '0.9rem', fontWeight: 700, marginBottom: '0.5rem' }}>
+                        Responsibilities &amp; expectations
+                      </h4>
+                      <ul style={{ paddingLeft: '1.1rem', color: 'var(--text-secondary)', fontSize: '0.82rem', margin: 0, lineHeight: 1.8 }}>
+                        {role.expectations.map(expectation => <li key={expectation}>{expectation}</li>)}
+                      </ul>
+                      <span className="role-card-cta">View interest form <span aria-hidden="true">↗</span></span>
+                    </a>
+                  </Col>
+                ))}
+              </Row>
+            </section>
           </Col>
         </Row>
 
