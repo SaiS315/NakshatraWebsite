@@ -85,7 +85,7 @@ function getInitials(name: string): string {
 const departments: {
   dept: string;
   email: string;
-  members: { name: string; photo?: string; objectPosition?: string }[];
+  members: { name: string; photo?: string }[];
 }[] = [
   {
     dept: 'Directors',
@@ -93,7 +93,7 @@ const departments: {
     members: [
       { name: 'Krishna Maganti', photo: krishnaPhoto },
       { name: 'Riya Mathews', photo: riyaPhoto },
-      { name: 'Srikar Kalapala', photo: srikarPhoto, objectPosition: 'center top' },
+      { name: 'Srikar Kalapala', photo: srikarPhoto },
     ],
   },
   {
@@ -222,8 +222,21 @@ export default function About() {
         {/* Narrative */}
         <Row className="align-items-center mb-4">
           <Col lg={7}>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: 1.9, marginBottom: '1.25rem' }}>
+              Nakshatra is the premier Indian classical dance competition at the University of
+              Wisconsin-Madison, showcasing the rich traditions of Indian dance. This annual event
+              invites eight highly skilled Indian classical dance teams from across the nation.
+            </p>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: 1.9, marginBottom: '1.25rem' }}>
+              The competition is organized by a dedicated executive board, supported by liaisons
+              and event managers, who work tirelessly to deliver a spectacular cultural showcase.
+              Nakshatra not only celebrates the art of Indian classical dance but also enriches the
+              Madison community by offering a glimpse into various classical Indian dance forms.
+            </p>
             <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: 1.9, margin: 0 }}>
-              Placeholder text for now.
+              Affiliated with the Multicultural Student Center at the University of Wisconsin–Madison,
+              Nakshatra is open to all students and welcomes anyone passionate about Indian culture,
+              the performing arts, and community-building.
             </p>
           </Col>
           <Col lg={5} className="text-center mt-4 mt-lg-0">
@@ -302,9 +315,7 @@ export default function About() {
                           loading="lazy"
                           style={{
                             width: '100%',
-                            height: '280px',
-                            objectFit: 'cover',
-                            objectPosition: m.objectPosition ?? 'center 60%',
+                            height: 'auto',
                             display: 'block',
                           }}
                           onError={(e) => {
@@ -320,7 +331,7 @@ export default function About() {
                         aria-label={m.name}
                         style={{
                           width: '100%',
-                          height: '280px',
+                          aspectRatio: '2 / 3',
                           background: 'rgba(107, 33, 168, 0.2)',
                           color: 'var(--gold)',
                           display: m.photo ? 'none' : 'flex',

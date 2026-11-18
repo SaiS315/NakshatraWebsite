@@ -355,6 +355,24 @@
   border-color: rgba(167, 139, 250, 0.4) !important;
 }
 
+.role-card-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.role-card-link:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+.role-card-cta {
+  display: inline-block;
+  margin-top: 1.25rem;
+  color: var(--gold);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
 /* ── Timeline ────────────────────────────────────────── */
 .timeline-item {
   position: relative;
