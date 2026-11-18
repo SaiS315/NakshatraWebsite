@@ -234,11 +234,3 @@ a:hover { color: var(--text-primary); }
   margin-bottom: 0.4rem;
   display: block;
 }
-
-.confirmation-box {
-  background: rgba(107, 33, 168, 0.1);
-  border: 1px solid var(--border-purple);
-  border-radius: 8px;
-  padding: 2rem;
-  text-align: center;
-}
