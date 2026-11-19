@@ -1,0 +1,1 @@
+var e=`/NakshatraWebsite/assets/team-06960-C1wG1BU7.webp`,t=`/NakshatraWebsite/assets/team-06841-6_Gfk5q9.webp`,n=`/NakshatraWebsite/assets/team-06885-xYPx5yKY.webp`;export{t as n,e as r,n as t};
