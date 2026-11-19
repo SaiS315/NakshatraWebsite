@@ -1,18 +1,26 @@
+import { useState } from 'react';
 import Container from 'react-bootstrap/Container';
+import heroFallback from '../assets/hero-fallback.jpg';
+import heroVideo from '../assets/home-background.mp4';
 import CountdownTimer from '../components/CountdownTimer';
 
 export default function Home() {
+  const [hasVideoError, setHasVideoError] = useState(false);
+
   return (
     <>
       <section className="hero-section">
         <video
           className="hero-background-video"
-          src={`${import.meta.env.BASE_URL}videos/home-background.mp4`}
+          src={heroVideo}
+          poster={heroFallback}
           autoPlay
           loop
           muted
           playsInline
           preload="metadata"
+          onError={() => setHasVideoError(true)}
+          hidden={hasVideoError}
           aria-hidden="true"
         />
         <div className="hero-content">

@@ -2,11 +2,11 @@ import { useState, type FormEvent } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import raisingCaneLogo from '../assets/raising_canes.png';
-import aashramRealtyLogo from '../assets/aashram_realty.png';
-import lmntLogo from '../assets/lmnt_logo_transparent.png';
+import raisingCaneLogo from '../assets/raising_canes.webp';
+import aashramRealtyLogo from '../assets/aashram_realty.webp';
+import lmntLogo from '../assets/lmnt_logo_transparent.webp';
 import bubblrLogo from '../assets/bubblrlogo.png';
-import mirchMasalaLogo from '../assets/mirch_masala.png';
+import mirchMasalaLogo from '../assets/mirch_masala.webp';
 
 const partnerLogos = [
   { name: "Raising Cane's", image: raisingCaneLogo },
@@ -15,6 +15,13 @@ const partnerLogos = [
   { name: 'Bubblr', image: bubblrLogo },
   { name: 'Mirch Masala', image: mirchMasalaLogo },
 ];
+
+const submissionErrors: Partial<Record<number, string>> = {
+  400: 'Some details need checking. Enter your name, a valid email address, how you’d like to help, and a message.',
+  413: 'Your inquiry is too long. Shorten your message and try again.',
+  429: 'Too many inquiries were sent in a short time. Please wait and try again later.',
+};
+const unavailableMessage = 'The sponsorship form is temporarily unavailable. Please try again later.';
 
 export default function Sponsors() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -41,18 +48,23 @@ export default function Sponsors() {
           website: formData.get('website'),
         }),
       });
-      const result: { message?: string } = await response.json();
-
       if (!response.ok) {
-        throw new Error(result.message || 'We could not send your inquiry. Please try again later.');
+        setStatus({ type: 'danger', message: submissionErrors[response.status] ?? unavailableMessage });
+        return;
+      }
+
+      const result = await response.json().catch(() => null);
+      if (typeof result?.message !== 'string') {
+        setStatus({ type: 'danger', message: 'We couldn’t confirm that your inquiry was sent. You can email us directly below.' });
+        return;
       }
 
       form.reset();
-      setStatus({ type: 'success', message: result.message || 'Thanks for reaching out. We will be in touch soon.' });
-    } catch (error) {
+      setStatus({ type: 'success', message: 'Thanks for reaching out. We’ll follow up by email.' });
+    } catch {
       setStatus({
         type: 'danger',
-        message: error instanceof Error ? error.message : 'We could not send your inquiry. Please try again later.',
+        message: 'We couldn’t reach the sponsorship form. Check your internet connection and try again.',
       });
     } finally {
       setIsSubmitting(false);
@@ -125,6 +137,11 @@ export default function Sponsors() {
                     {status && (
                       <div className={`alert alert-${status.type} mt-3 mb-0`} role="status" aria-live="polite">
                         {status.message}
+                        {status.type === 'danger' && (
+                          <div className="mt-2">
+                            Email <a className="alert-link" href="mailto:nakshatrauw@gmail.com">nakshatrauw@gmail.com</a> for help.
+                          </div>
+                        )}
                       </div>
                     )}
                   </Col>
@@ -145,7 +162,7 @@ export default function Sponsors() {
             {partnerLogos.map(({ name, image }) => (
               <Col key={name} xs={12} sm={6} lg={4}>
                 <div className="partner-logo-card" aria-label={`${name} logo`}>
-                  <img className="partner-logo-image" src={image} alt={`${name} logo`} />
+                  <img className="partner-logo-image" src={image} alt={`${name} logo`} loading="lazy" />
                 </div>
               </Col>
             ))}

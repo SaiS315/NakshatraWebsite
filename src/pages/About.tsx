@@ -2,34 +2,35 @@ import { useEffect, useRef, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import adithyaPhoto from '../assets/ExecBoardPhotos/Adithya.jpg';
-import ananyaShankarPhoto from '../assets/ExecBoardPhotos/AnanyaS.jpg';
-import ananyaYanduruPhoto from '../assets/ExecBoardPhotos/AnanyaY.jpg';
-import ayushPhoto from '../assets/ExecBoardPhotos/Ayush.jpg';
-import ashwathPhoto from '../assets/ExecBoardPhotos/Ashwath.jpg';
-import aathmikhaPhoto from '../assets/ExecBoardPhotos/Aathmikha.jpg';
-import chetanaPhoto from '../assets/ExecBoardPhotos/Chetana.jpg';
-import diyaPhoto from '../assets/ExecBoardPhotos/Diya.jpg';
-import jairamPhoto from '../assets/ExecBoardPhotos/Jairam.jpg';
-import hiyaPhoto from '../assets/ExecBoardPhotos/Hiya.jpg';
-import joshithaPhoto from '../assets/ExecBoardPhotos/Joshitha.jpg';
-import krishnaPhoto from '../assets/ExecBoardPhotos/Krishna.jpg';
-import nandiniPhoto from '../assets/ExecBoardPhotos/Nandini.jpg';
-import patriciaPhoto from '../assets/ExecBoardPhotos/Patricia.jpg';
-import pransiPhoto from '../assets/ExecBoardPhotos/Pransi.jpg';
-import riyaPhoto from '../assets/ExecBoardPhotos/Riya.jpg';
-import rohitPhoto from '../assets/ExecBoardPhotos/Rohit.jpg';
-import roystonPhoto from '../assets/ExecBoardPhotos/Royston.jpg';
-import saiPhoto from '../assets/ExecBoardPhotos/Sai.jpg';
-import sanjayPhoto from '../assets/ExecBoardPhotos/Sanjay.jpg';
-import sanjnaPhoto from '../assets/ExecBoardPhotos/Sanjna.jpg';
-import shaktiPhoto from '../assets/ExecBoardPhotos/Shakti.jpg';
-import snehaPhoto from '../assets/ExecBoardPhotos/Sneha.jpg';
-import srikarPhoto from '../assets/ExecBoardPhotos/Srikar.jpg';
-import sripadaPhoto from '../assets/ExecBoardPhotos/Sripada.jpg';
-import siratPhoto from '../assets/ExecBoardPhotos/Sirat.jpg';
-import srutiPhoto from '../assets/ExecBoardPhotos/Sruti.jpg';
-import fullBoardPhoto from '../assets/FullBoard.jpg';
+import adithyaPhoto from '../assets/ExecBoardPhotos/Adithya.webp';
+import ananyaShankarPhoto from '../assets/ExecBoardPhotos/AnanyaS.webp';
+import ananyaYanduruPhoto from '../assets/ExecBoardPhotos/AnanyaY.webp';
+import ayushPhoto from '../assets/ExecBoardPhotos/Ayush.webp';
+import ashwathPhoto from '../assets/ExecBoardPhotos/Ashwath.webp';
+import aathmikhaPhoto from '../assets/ExecBoardPhotos/Aathmikha.webp';
+import chetanaPhoto from '../assets/ExecBoardPhotos/Chetana.webp';
+import diyaPhoto from '../assets/ExecBoardPhotos/Diya.webp';
+import jairamPhoto from '../assets/ExecBoardPhotos/Jairam.webp';
+import hiyaPhoto from '../assets/ExecBoardPhotos/Hiya.webp';
+import joshithaPhoto from '../assets/ExecBoardPhotos/Joshitha.webp';
+import krishnaPhoto from '../assets/ExecBoardPhotos/Krishna.webp';
+import nandiniPhoto from '../assets/ExecBoardPhotos/Nandini.webp';
+import patriciaPhoto from '../assets/ExecBoardPhotos/Patricia.webp';
+import pransiPhoto from '../assets/ExecBoardPhotos/Pransi.webp';
+import riyaPhoto from '../assets/ExecBoardPhotos/Riya.webp';
+import rohitPhoto from '../assets/ExecBoardPhotos/Rohit.webp';
+import roystonPhoto from '../assets/ExecBoardPhotos/Royston.webp';
+import saiPhoto from '../assets/ExecBoardPhotos/Sai.webp';
+import sanjayPhoto from '../assets/ExecBoardPhotos/Sanjay.webp';
+import sanjnaPhoto from '../assets/ExecBoardPhotos/Sanjna.webp';
+import shaktiPhoto from '../assets/ExecBoardPhotos/Shakti.webp';
+import snehaPhoto from '../assets/ExecBoardPhotos/Sneha.webp';
+import srikarPhoto from '../assets/ExecBoardPhotos/Srikar.webp';
+import sripadaPhoto from '../assets/ExecBoardPhotos/Sripada.webp';
+import siratPhoto from '../assets/ExecBoardPhotos/Sirat.webp';
+import srutiPhoto from '../assets/ExecBoardPhotos/Sruti.webp';
+import fullBoardPhoto from '../assets/FullBoard-520.webp';
+import fullBoardPhotoLarge from '../assets/FullBoard-1040.webp';
 
 // ── Scroll-reveal hook ────────────────────────────────────────
 function useReveal() {
@@ -242,6 +243,10 @@ export default function About() {
           <Col lg={5} className="text-center mt-4 mt-lg-0">
             <img
               src={fullBoardPhoto}
+              srcSet={`${fullBoardPhoto} 520w, ${fullBoardPhotoLarge} 1040w`}
+              sizes="(min-width: 1400px) 520px, (min-width: 1200px) 451px, (min-width: 992px) 376px, (min-width: 544px) 520px, calc(100vw - 24px)"
+              width={520}
+              height={836}
               alt="Nakshatra full board"
               style={{
                 width: '100%',
