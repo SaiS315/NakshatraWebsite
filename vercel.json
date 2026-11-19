@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/(home|competition|teams|sponsors|apply|about|events)",
+      "destination": "/index.html"
+    }
+  ]
+}

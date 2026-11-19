@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect } from 'react';
-import { HashRouter, matchPath, Navigate, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, HashRouter, matchPath, Navigate, parsePath, Routes, Route, useLocation } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import StarBackground from './components/StarBackground';
@@ -21,6 +21,19 @@ const sections = [
   { path: '/about', title: 'About', Page: About },
 ];
 
+// Vercel serves from the domain root. GitHub Pages uses the repository base path.
+const Router = import.meta.env.BASE_URL === '/' ? BrowserRouter : HashRouter;
+
+function HomeRedirect() {
+  const { hash, search } = useLocation();
+  const legacy = parsePath(hash.slice(1));
+  const pathname = legacy.pathname ?? '';
+  const section = sections.find(({ path }) => matchPath(path, pathname));
+  const destination = section?.path ?? (matchPath('/events', pathname) ? '/teams' : '/home');
+
+  return <Navigate to={{ pathname: destination, search: legacy.search ?? search, hash: legacy.hash }} replace />;
+}
+
 function SectionTitle() {
   const { pathname } = useLocation();
   const section = sections.find(({ path }) => matchPath(path, pathname));
@@ -34,14 +47,14 @@ function SectionTitle() {
 
 export default function App() {
   return (
-    <HashRouter>
+    <Router>
       <SectionTitle />
       <StarBackground />
       <NavBar />
       <main style={{ flex: 1, position: 'relative', zIndex: 1 }}>
         <Suspense fallback={<p className="page-wrapper text-center" role="status">Loading page…</p>}>
           <Routes>
-            <Route path="/" element={<Navigate to="/home" replace />} />
+            <Route path="/" element={<HomeRedirect />} />
             {sections.map(({ path, Page }) => (
               <Route key={path} path={path} element={<Page />} />
             ))}
@@ -50,6 +63,6 @@ export default function App() {
         </Suspense>
       </main>
       <Footer />
-    </HashRouter>
+    </Router>
   );
 }
