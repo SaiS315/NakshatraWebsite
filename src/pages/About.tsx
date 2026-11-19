@@ -214,7 +214,7 @@ export default function About() {
         {/* Heading */}
         <Row className="text-center mb-2">
           <Col>
-            <h1 style={{ fontFamily: 'var(--font-heading)', color: 'var(--gold)', fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 700, letterSpacing: '0.08em', marginBottom: '1.5rem' }}>
+            <h1 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 700, letterSpacing: '0.08em', marginBottom: '1.5rem' }}>
               What is Nakshatra?
             </h1>
           </Col>
@@ -261,7 +261,7 @@ export default function About() {
             <p style={{
               marginTop: '1rem',
               marginBottom: 0,
-              color: 'var(--gold)',
+              color: '#fff',
               fontFamily: 'var(--font-heading)',
               fontSize: 'clamp(0.9rem, 1.6vw, 1.2rem)',
               fontWeight: 700,
@@ -278,12 +278,12 @@ export default function About() {
         {/* Executive Board heading */}
         <Row className="mb-5">
           <Col>
-            <h2 style={{ fontFamily: 'var(--font-heading)', color: 'var(--gold)', fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 700, letterSpacing: '0.06em', marginBottom: '0.4rem' }}>
+            <h2 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 700, letterSpacing: '0.06em', marginBottom: '0.4rem' }}>
               Executive Board
             </h2>
             <p style={{ fontFamily: 'var(--font-body)', color: 'var(--text-secondary)', fontSize: '0.92rem', margin: 0 }}>
               Questions? Reach the full team at{' '}
-              <a href="mailto:nakshatrauw@gmail.com" style={{ color: 'var(--gold)', textDecoration: 'none' }}>
+              <a href="mailto:nakshatrauw@gmail.com" style={{ color: '#fff', textDecoration: 'none' }}>
                 nakshatrauw@gmail.com
               </a>
             </p>
@@ -297,7 +297,7 @@ export default function About() {
             {/* Department title slides up first */}
             <Reveal delay={0}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
-                <h2 style={{ fontFamily: 'var(--font-heading)', color: 'var(--gold)', fontSize: '1.5rem', fontWeight: 600, letterSpacing: '0.06em', margin: 0 }}>
+                <h2 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: '1.5rem', fontWeight: 600, letterSpacing: '0.06em', margin: 0 }}>
                   {dept.dept}
                 </h2>
                 <div style={{ flex: 1, height: '1px', background: 'var(--border-gold)' }} />
@@ -338,7 +338,7 @@ export default function About() {
                           width: '100%',
                           aspectRatio: '2 / 3',
                           background: 'rgba(107, 33, 168, 0.2)',
-                          color: 'var(--gold)',
+                          color: '#fff',
                           display: m.photo ? 'none' : 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',

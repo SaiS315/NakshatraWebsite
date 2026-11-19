@@ -8,7 +8,7 @@ export default function Footer() {
 <Container>
         <Row className="align-items-start g-4">
           <Col md={4}>
-            <div className="footer-brand" style={{ fontSize: '1.3rem', color: 'var(--gold)', marginBottom: '0.5rem' }}>
+            <div className="footer-brand" style={{ fontSize: '1.3rem', color: '#fff', marginBottom: '0.5rem' }}>
               <span className="brand-wordmark" aria-hidden="true">NAKSHATRA</span>
               <span className="visually-hidden">Nakshatra</span>
             </div>
@@ -34,13 +34,13 @@ export default function Footer() {
             <p style={{ fontWeight: 500, color: 'var(--text-secondary)', marginBottom: '0.25rem', letterSpacing: '0.08em', textTransform: 'uppercase', fontSize: '0.72rem' }}>
               Contact
             </p>
-            <a href="mailto:nakshatrauw@gmail.com" style={{ color: 'var(--gold)', textDecoration: 'none', fontWeight: 500, display: 'block', marginBottom: '0.4rem' }}>
+            <a href="mailto:nakshatrauw@gmail.com" style={{ color: '#fff', textDecoration: 'none', fontWeight: 500, display: 'block', marginBottom: '0.4rem' }}>
               nakshatrauw@gmail.com
             </a>
-            <a href="mailto:nakshatrauw.relations@gmail.com" style={{ color: 'var(--gold)', textDecoration: 'none', fontWeight: 500, display: 'block', marginBottom: '0.4rem' }}>
+            <a href="mailto:nakshatrauw.relations@gmail.com" style={{ color: '#fff', textDecoration: 'none', fontWeight: 500, display: 'block', marginBottom: '0.4rem' }}>
               nakshatrauw.relations@gmail.com
             </a>
-            <a href="mailto:nakshatrauw.finance@gmail.com" style={{ color: 'var(--gold)', textDecoration: 'none', fontWeight: 500, display: 'block' }}>
+            <a href="mailto:nakshatrauw.finance@gmail.com" style={{ color: '#fff', textDecoration: 'none', fontWeight: 500, display: 'block' }}>
               nakshatrauw.finance@gmail.com
             </a>
             <p style={{ color: 'var(--text-secondary)', margin: '0.75rem 0 0', fontSize: '0.78rem' }}>

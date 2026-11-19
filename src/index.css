@@ -44,9 +44,20 @@ body {
   z-index: 1;
 }
 
+/* Sitewide preview of the original navigation text color. */
+#root,
+#root :where(:not(svg, svg *, [aria-hidden='true'])),
+#root :where(input, textarea)::placeholder {
+  color: var(--text-secondary) !important;
+}
+
+#root .alert {
+  --bs-alert-bg: var(--navy-light);
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  color: var(--gold);
+  color: #fff;
   font-weight: 500 !important;
   letter-spacing: 0.04em;
 }
@@ -55,7 +66,7 @@ p, li, label, span {
   font-family: var(--font-body);
 }
 
-a { color: var(--gold-bright); }
+a { color: #fff; }
 a:hover { color: var(--text-primary); }
 
 /* ── Utility classes ────────────────────────── */
@@ -81,7 +92,7 @@ a:hover { color: var(--text-primary); }
 .btn-ghost {
   background: transparent;
   border: 1px solid var(--border-gold);
-  color: var(--gold);
+  color: #fff;
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 0.85rem;
@@ -95,12 +106,12 @@ a:hover { color: var(--text-primary); }
 
 .btn-ghost:hover {
   border-color: var(--gold);
-  color: var(--gold-bright);
+  color: #fff;
   box-shadow: 0 0 14px var(--gold-glow);
   background: transparent;
 }
 
-.text-gold { color: var(--gold) !important; }
+.text-gold { color: #fff !important; }
 .text-muted-custom { color: var(--text-secondary) !important; }
 
 .page-wrapper {
@@ -136,7 +147,7 @@ a:hover { color: var(--text-primary); }
   font-size: clamp(1.5rem, 3.5vw, 2.5rem);
   font-weight: 500;
   letter-spacing: 0.04em;
-  color: var(--gold);
+  color: #fff;
   margin: 0 0 1.5rem;
 }
 
@@ -144,9 +155,9 @@ a:hover { color: var(--text-primary); }
   font-family: var(--font-heading);
   font-size: clamp(3rem, 7vw, 5.5rem);
   font-weight: 700;
-  color: var(--gold);
+  color: #fff;
   line-height: 1;
-  text-shadow: 0 0 30px var(--gold-glow);
+  text-shadow: 0 0 30px rgb(255 255 255 / 45%);
 }
 
 .countdown-date {

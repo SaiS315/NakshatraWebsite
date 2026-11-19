@@ -35,7 +35,7 @@ export default function Teams() {
             <Col>
               <h2 id="teams-coming-soon-heading" style={{
                 fontFamily: 'var(--font-heading)',
-                color: 'var(--gold)',
+                color: '#fff',
                 fontSize: 'clamp(1.6rem, 4vw, 2.4rem)',
                 letterSpacing: '0.04em',
                 lineHeight: 1.3,

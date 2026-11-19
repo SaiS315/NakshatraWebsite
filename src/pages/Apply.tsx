@@ -60,7 +60,7 @@ export default function Apply() {
       <Container>
         <Row className="text-center mb-4">
           <Col>
-            <h1 style={{ fontFamily: 'var(--font-heading)', color: 'var(--gold)', fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 700, letterSpacing: '0.08em', marginBottom: 0 }}>
+            <h1 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 700, letterSpacing: '0.08em', marginBottom: 0 }}>
               Register your interest!
             </h1>
           </Col>
@@ -86,7 +86,7 @@ export default function Apply() {
                       aria-label={`${role.title} responsibilities and expectations. Open interest form in a new tab.`}
                       style={{ padding: '2rem' }}
                     >
-                      <h3 style={{ fontFamily: 'var(--font-heading)', color: 'var(--gold)', fontSize: '1.4rem', fontWeight: 700, marginBottom: '0.6rem' }}>
+                      <h3 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: '1.4rem', fontWeight: 700, marginBottom: '0.6rem' }}>
                         {role.title}
                       </h3>
                       <p style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', lineHeight: 1.65, marginBottom: '1rem' }}>
@@ -119,7 +119,7 @@ export default function Apply() {
           {timeline.map(item => (
             <li className="timeline-item" key={item.date}>
               <span className="timeline-dot" aria-hidden="true" />
-              <p style={{ color: 'var(--gold)', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.1em', margin: '0 0 0.25rem', textTransform: 'uppercase' }}>
+              <p style={{ color: '#fff', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.1em', margin: '0 0 0.25rem', textTransform: 'uppercase' }}>
                 {item.date}
               </p>
               <p style={{ color: 'var(--text-primary)', fontSize: '0.95rem', fontWeight: 500, margin: 0 }}>
