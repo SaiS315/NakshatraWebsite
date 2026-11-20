@@ -44,11 +44,15 @@ body {
   z-index: 1;
 }
 
-/* Sitewide preview of the original navigation text color. */
+/* Lavender text preview with brighter headings and countdown numbers. */
 #root,
 #root :where(:not(svg, svg *, [aria-hidden='true'])),
 #root :where(input, textarea)::placeholder {
-  color: var(--text-secondary) !important;
+  color: var(--preview-text-color, var(--text-secondary)) !important;
+}
+
+#root :where(h1, h2, h3, h4, h5, h6, .countdown-title, .countdown-number) {
+  --preview-text-color: #e8ddf5;
 }
 
 #root .alert {
@@ -76,7 +80,6 @@ a:hover { color: var(--text-primary); }
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border-purple);
-  box-shadow: 0 0 20px rgba(107, 33, 168, 0.18), inset 0 0 20px rgba(255,255,255,0.02);
   border-radius: 8px;
 }
 
@@ -85,7 +88,6 @@ a:hover { color: var(--text-primary); }
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border-gold);
-  box-shadow: 0 0 20px rgba(201, 168, 76, 0.1);
   border-radius: 8px;
 }
 
@@ -157,7 +159,6 @@ a:hover { color: var(--text-primary); }
   font-weight: 700;
   color: #fff;
   line-height: 1;
-  text-shadow: 0 0 30px rgb(255 255 255 / 45%);
 }
 
 .countdown-date {

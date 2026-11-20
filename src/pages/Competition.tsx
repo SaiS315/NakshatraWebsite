@@ -116,6 +116,9 @@ export default function Competition() {
           <h2 id="winners-heading" className="competition-section-title">
             Last Year&apos;s Winners
           </h2>
+          <p id="winners-description" className="competition-section-description text-center">
+            Click on their photo to watch their performance on YouTube!
+          </p>
           <div className="competition-winners">
             {lastYearWinners.map(({ place, team, originsNote, image, performanceUrl }) => (
               <article className="competition-winner-card" key={team}>

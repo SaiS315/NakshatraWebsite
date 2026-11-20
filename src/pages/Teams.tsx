@@ -41,7 +41,7 @@ export default function Teams() {
                 lineHeight: 1.3,
                 marginBottom: '0.75rem',
               }}>
-                Dancers taking us on a magic carpet ride: Flying in Soon!
+                The dancers taking us on a magic carpet ride will be flying in soon!
               </h2>
             </Col>
           </Row>
