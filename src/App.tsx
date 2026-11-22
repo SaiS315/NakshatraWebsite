@@ -13,7 +13,7 @@ const Apply = lazy(() => import('./pages/Apply'));
 const Sponsors = lazy(() => import('./pages/Sponsors'));
 
 const sections = [
-  { path: '/home', title: 'Home', Page: Home },
+  { path: '/home', title: '', Page: Home },
   { path: '/competition', title: 'Competition', Page: Competition },
   { path: '/teams', title: 'Teams', Page: Teams },
   { path: '/sponsors', title: 'Sponsors', Page: Sponsors },
@@ -39,7 +39,7 @@ function SectionTitle() {
   const section = sections.find(({ path }) => matchPath(path, pathname));
 
   useEffect(() => {
-    document.title = section ? `${section.title} | Nakshatra-UW` : 'Nakshatra-UW';
+    document.title = section?.title ? `${section.title} | Nakshatra-UW` : 'Nakshatra-UW';
   }, [section]);
 
   return null;
