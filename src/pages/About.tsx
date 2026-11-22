@@ -147,7 +147,7 @@ const departments: {
   },
   {
     dept: 'Logistics',
-    email: 'nakshatrauw.finance@gmail.com',
+    email: 'nakshatrauw.relations@gmail.com',
     members: [
       { name: 'Sirat Mokha', photo: siratPhoto },
       { name: 'Sruti Palla', photo: srutiPhoto },
@@ -187,7 +187,7 @@ const departments: {
   },
   {
     dept: 'Tech',
-    email: 'nakshatrauw.finance@gmail.com',
+    email: 'nakshatrauw.relations@gmail.com',
     members: [
       { name: 'Sanjay Murali', photo: sanjayPhoto },
       { name: 'Saikrishna Sunkara', photo: saiPhoto },
