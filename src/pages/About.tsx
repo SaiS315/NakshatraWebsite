@@ -250,6 +250,7 @@ export default function About() {
               alt="Nakshatra full board"
               style={{
                 width: '100%',
+                height: 'auto',
                 maxWidth: '520px',
                 borderRadius: '12px',
                 border: '1px solid var(--border-gold)',
@@ -312,7 +313,7 @@ export default function About() {
               {dept.members.map((m, mi) => (
                 <Col key={mi} xs={12} sm={6} md={4} lg={3}>
                   <Reveal delay={0.1 + mi * 0.08}>
-                    <div style={{ overflow: 'hidden', borderRadius: '6px', background: 'rgba(255,255,255,0.04)', border: '1px solid var(--border-purple)' }}>
+                    <div className="about-member-card" style={{ overflow: 'hidden', borderRadius: '6px', background: 'rgba(255,255,255,0.04)', border: '1px solid var(--border-purple)' }}>
                       {m.photo && (
                         <img
                           src={m.photo}
