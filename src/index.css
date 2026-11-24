@@ -57,6 +57,7 @@ body {
 
 #root .alert {
   --bs-alert-bg: var(--navy-light);
+  --bs-alert-border-radius: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -80,7 +81,6 @@ a:hover { color: var(--text-primary); }
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border-purple);
-  border-radius: 8px;
 }
 
 .glass-card-gold {
@@ -88,7 +88,6 @@ a:hover { color: var(--text-primary); }
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border-gold);
-  border-radius: 8px;
 }
 
 .btn-ghost {
@@ -101,7 +100,6 @@ a:hover { color: var(--text-primary); }
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 0.65rem 2rem;
-  border-radius: 4px;
   transition: border-color 0.2s, color 0.2s, box-shadow 0.2s;
   cursor: pointer;
 }
@@ -217,7 +215,7 @@ a:hover { color: var(--text-primary); }
   color: var(--text-primary) !important;
   font-family: var(--font-body) !important;
   font-size: 0.9rem !important;
-  border-radius: 4px !important;
+  border-radius: 0 !important;
 }
 
 .form-control-dark::placeholder { color: var(--text-secondary) !important; }

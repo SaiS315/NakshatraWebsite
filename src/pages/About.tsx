@@ -252,7 +252,6 @@ export default function About() {
                 width: '100%',
                 height: 'auto',
                 maxWidth: '520px',
-                borderRadius: '12px',
                 border: '1px solid var(--border-gold)',
                 boxShadow: '0 12px 30px rgba(0, 0, 0, 0.2)',
                 display: 'block',
@@ -313,15 +312,14 @@ export default function About() {
               {dept.members.map((m, mi) => (
                 <Col key={mi} xs={12} sm={6} md={4} lg={3}>
                   <Reveal delay={0.1 + mi * 0.08}>
-                    <div className="about-member-card" style={{ overflow: 'hidden', borderRadius: '6px', background: 'rgba(255,255,255,0.04)', border: '1px solid var(--border-purple)' }}>
+                    <div className="about-member-card">
                       {m.photo && (
                         <img
+                          className="about-member-portrait"
                           src={m.photo}
                           alt={m.name}
                           loading="lazy"
                           style={{
-                            width: '100%',
-                            height: 'auto',
                             display: 'block',
                           }}
                           onError={(e) => {
@@ -333,11 +331,10 @@ export default function About() {
                         />
                       )}
                       <div
+                        className="about-member-portrait"
                         role="img"
                         aria-label={m.name}
                         style={{
-                          width: '100%',
-                          aspectRatio: '2 / 3',
                           background: 'rgba(107, 33, 168, 0.2)',
                           color: '#fff',
                           display: m.photo ? 'none' : 'flex',

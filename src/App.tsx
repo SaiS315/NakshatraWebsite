@@ -13,7 +13,6 @@ const Apply = lazy(() => import('./pages/Apply'));
 const Sponsors = lazy(() => import('./pages/Sponsors'));
 
 const sections = [
-  { path: '/home', title: '', Page: Home },
   { path: '/competition', title: 'Competition', Page: Competition },
   { path: '/teams', title: 'Teams', Page: Teams },
   { path: '/sponsors', title: 'Sponsors', Page: Sponsors },
@@ -24,12 +23,18 @@ const sections = [
 // Vercel serves from the domain root. GitHub Pages uses the repository base path.
 const Router = import.meta.env.BASE_URL === '/' ? BrowserRouter : HashRouter;
 
-function HomeRedirect() {
-  const { hash, search } = useLocation();
+function HomeEntry() {
+  const { pathname, hash, search } = useLocation();
+  if (matchPath('/home', pathname)) {
+    return <Navigate to={{ pathname: '/', search, hash }} replace />;
+  }
+
+  if (Router !== BrowserRouter || !hash.startsWith('#/')) return <Home />;
+
   const legacy = parsePath(hash.slice(1));
-  const pathname = legacy.pathname ?? '';
-  const section = sections.find(({ path }) => matchPath(path, pathname));
-  const destination = section?.path ?? (matchPath('/events', pathname) ? '/teams' : '/home');
+  const legacyPath = legacy.pathname ?? '';
+  const section = sections.find(({ path }) => matchPath(path, legacyPath));
+  const destination = section?.path ?? (matchPath('/events', legacyPath) ? '/teams' : '/');
 
   return <Navigate to={{ pathname: destination, search: legacy.search ?? search, hash: legacy.hash }} replace />;
 }
@@ -54,7 +59,8 @@ export default function App() {
       <main style={{ flex: 1, position: 'relative', zIndex: 1 }}>
         <Suspense fallback={<p className="page-wrapper text-center" role="status">Loading page…</p>}>
           <Routes>
-            <Route path="/" element={<HomeRedirect />} />
+            <Route path="/" element={<HomeEntry />} />
+            <Route path="/home" element={<HomeEntry />} />
             {sections.map(({ path, Page }) => (
               <Route key={path} path={path} element={<Page />} />
             ))}
