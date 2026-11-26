@@ -75,7 +75,7 @@ export default function Teams() {
             <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem', lineHeight: 1.7 }}>
               In the meantime, learn how the competition works!
             </p>
-            <Link to="/competition" className="btn-ghost" style={{ display: 'inline-block', textDecoration: 'none' }}>
+            <Link to="/competition" target="_blank" rel="noopener noreferrer" className="btn-ghost" style={{ display: 'inline-block', textDecoration: 'none' }}>
               Competition
             </Link>
           </Col>

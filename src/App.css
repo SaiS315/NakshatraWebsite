@@ -539,10 +539,6 @@
   object-fit: cover;
 }
 
-.team-photo-marquee:hover .team-photo-track {
-  animation-play-state: paused;
-}
-
 @keyframes team-photo-loop {
   to {
     transform: translateX(-50%);
@@ -648,10 +644,6 @@
   width: 100%;
 }
 
-.competition-logo-marquee:hover .competition-logo-track {
-  animation-play-state: paused;
-}
-
 .competition-winners {
   display: grid;
   gap: 1.5rem;
@@ -744,23 +736,6 @@
 
 .competition-details .competition-section-title {
   margin-bottom: 1.25rem;
-}
-
-.competition-order {
-  margin: 0 auto;
-  max-width: 900px;
-  padding: 1.75rem;
-  text-align: center;
-}
-
-.competition-order .competition-section-title {
-  margin-bottom: 0.5rem;
-}
-
-.competition-order p {
-  color: var(--text-secondary);
-  font-size: 1.1rem;
-  margin: 0;
 }
 
 @keyframes competition-logo-loop {

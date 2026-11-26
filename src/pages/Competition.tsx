@@ -106,7 +106,7 @@ export default function Competition() {
             {' '}To learn more about Origins, click on their logo below.
           </p>
           <div className="d-flex justify-content-center mt-4">
-            <a className="competition-origins-link" href="https://originschampionship.com/">
+            <a className="competition-origins-link" href="https://originschampionship.com/" target="_blank" rel="noopener noreferrer">
               <img src={originsLogo} alt="Origins Dance Championship website" loading="lazy" />
             </a>
           </div>
@@ -149,12 +149,6 @@ export default function Competition() {
           </div>
         </section>
 
-        <section className="competition-order" aria-labelledby="show-order-heading">
-          <h2 id="show-order-heading" className="competition-section-title">
-            3.0 Show Order
-          </h2>
-          <p>TBD</p>
-        </section>
       </Container>
     </div>
   );

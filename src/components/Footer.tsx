@@ -36,7 +36,7 @@ export default function Footer() {
     <footer className="footer-dark">
 <Container>
         <Row className="align-items-start g-4">
-          <Col md={4}>
+          <Col md={4} className="text-center text-md-start">
             <div className="footer-brand" style={{ fontSize: '1.3rem', color: '#fff', marginBottom: '0.5rem' }}>
               <span className="brand-wordmark" aria-hidden="true">NAKSHATRA</span>
               <span className="visually-hidden">Nakshatra</span>
@@ -44,9 +44,9 @@ export default function Footer() {
             <p style={{ margin: 0, lineHeight: 1.6, color: 'var(--text-secondary)' }}>
               University of Wisconsin–Madison's premier collegiate Indian classical dance competition.
             </p>
-            <nav className="d-flex gap-2 mt-2" aria-label="Social media">
+            <nav className="d-flex justify-content-center justify-content-md-start gap-2 mt-2" aria-label="Social media">
               {socialLinks.map(({ name, url, icon }) => (
-                <a key={name} href={url} aria-label={name} className="footer-social-link">
+                <a key={name} href={url} target="_blank" rel="noopener noreferrer" aria-label={name} className="footer-social-link">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     {icon}
                   </svg>
@@ -68,7 +68,7 @@ export default function Footer() {
             ))}
           </Col>
 
-          <Col md={4} className="text-md-end">
+          <Col md={4} className="text-center text-md-end">
             <p style={{ fontWeight: 500, color: 'var(--text-secondary)', marginBottom: '0.25rem', letterSpacing: '0.08em', textTransform: 'uppercase', fontSize: '0.72rem' }}>
               Contact
             </p>

@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import StarBackground from './components/StarBackground';
 import Home from './pages/Home';
+import { pageDescriptions } from './pageDescriptions';
 import './App.css';
 
 const Competition = lazy(() => import('./pages/Competition'));
@@ -18,7 +19,7 @@ const sections = [
   { path: '/sponsors', title: 'Sponsors', Page: Sponsors },
   { path: '/apply', title: 'Apply', Page: Apply },
   { path: '/about', title: 'About', Page: About },
-];
+] as const;
 
 // Vercel serves from the domain root. GitHub Pages uses the repository base path.
 const Router = import.meta.env.BASE_URL === '/' ? BrowserRouter : HashRouter;
@@ -39,12 +40,13 @@ function HomeEntry() {
   return <Navigate to={{ pathname: destination, search: legacy.search ?? search, hash: legacy.hash }} replace />;
 }
 
-function SectionTitle() {
+function SectionMetadata() {
   const { pathname } = useLocation();
   const section = sections.find(({ path }) => matchPath(path, pathname));
 
   useEffect(() => {
     document.title = section?.title ? `${section.title} | Nakshatra-UW` : 'Nakshatra-UW';
+    document.querySelector('meta[name="description"]')?.setAttribute('content', pageDescriptions[section?.path ?? '/']);
   }, [section]);
 
   return null;
@@ -53,7 +55,7 @@ function SectionTitle() {
 export default function App() {
   return (
     <Router>
-      <SectionTitle />
+      <SectionMetadata />
       <StarBackground />
       <NavBar />
       <main style={{ flex: 1, position: 'relative', zIndex: 1 }}>

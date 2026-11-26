@@ -282,7 +282,7 @@ export default function About() {
               Executive Board
             </h2>
             <p style={{ fontFamily: 'var(--font-body)', color: 'var(--text-secondary)', fontSize: '0.92rem', margin: 0 }}>
-              Questions? Reach the full team at{' '}
+              Need to reach out to a specific member of our board? Find their email below, or send a general inquiry to {' '}
               <a href="mailto:nakshatrauw@gmail.com" style={{ color: '#fff', textDecoration: 'none' }}>
                 nakshatrauw@gmail.com
               </a>
